@@ -44,10 +44,10 @@ export default function Contact() {
                     </div>
 
                     <div className="flex gap-4 mt-12">
-                        <a href="#" className="p-3 rounded-full bg-white/5 hover:bg-white/10 hover:text-blue-500 transition-colors">
+                        <a href="https://github.com/joseph0ngandu-ui" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 hover:text-blue-500 transition-colors">
                             <Github className="w-5 h-5" />
                         </a>
-                        <a href="#" className="p-3 rounded-full bg-white/5 hover:bg-white/10 hover:text-blue-500 transition-colors">
+                        <a href="https://www.linkedin.com/in/joseph-ngandu-74b570372" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 hover:text-blue-500 transition-colors">
                             <Linkedin className="w-5 h-5" />
                         </a>
                     </div>

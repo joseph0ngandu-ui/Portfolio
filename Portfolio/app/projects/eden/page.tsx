@@ -1,0 +1,209 @@
+"use client";
+
+import { motion } from "framer-motion";
+import {
+    Cpu, TrendingUp, Brain, Cloud, Shield, Zap,
+    BarChart3, GitBranch, Database, Smartphone,
+    Activity, Lock, RefreshCw, CheckCircle2
+} from "lucide-react";
+import BentoCard from "@/components/BentoCard";
+
+export default function EdenProject() {
+    const features = [
+        { icon: TrendingUp, title: "Multi-Timeframe Bias Engine", desc: "HTF bias modeling with synchronized analysis" },
+        { icon: Brain, title: "ML-Driven Strategy Discovery", desc: "Continuous learning and low-performance pruning" },
+        { icon: Zap, title: "ICT + Price Action Hybrid", desc: "Advanced concepts with statistical validation" },
+        { icon: BarChart3, title: "Automated Backtesting Pipeline", desc: "Historical validation and optimization" },
+        { icon: Activity, title: "Real-Time Trade Execution", desc: "Smart execution with liquidity-aware entries" },
+        { icon: Database, title: "Dynamic Liquidity Detection", desc: "FVG + displacement filtering" },
+        { icon: RefreshCw, title: "Kill-Zone Automation", desc: "Time-based session optimization" },
+        { icon: Shield, title: "Adaptive Risk Management", desc: "Volatility modeling and position sizing" },
+        { icon: GitBranch, title: "Multi-Account Management", desc: "Scaled deployment across accounts" },
+        { icon: Cloud, title: "Serverless Backend", desc: "AWS Lambda, API Gateway, DynamoDB" },
+        { icon: Smartphone, title: "Mobile Dashboard", desc: "Real-time monitoring and analytics" },
+        { icon: Lock, title: "Error Recovery + Auto-Restart", desc: "Resilient architecture with diagnostics" }
+    ];
+
+    const techStack = [
+        { category: "Core", items: ["Python", "FastAPI", "MQL5"] },
+        { category: "ML/AI", items: ["TensorFlow", "scikit-learn", "Statistical Models"] },
+        { category: "Cloud", items: ["AWS Lambda", "API Gateway", "DynamoDB", "S3", "CloudWatch", "EC2"] },
+        { category: "Infrastructure", items: ["Docker", "Git", "CI/CD", "WebSockets"] },
+        { category: "Frontend", items: ["React Native", "Swift", "Real-time Charts"] },
+        { category: "Security", items: ["Secure Key Management", "Environment Isolation", "Encrypted Storage"] }
+    ];
+
+    return (
+        <div className="pt-32 pb-20 px-4 md:px-8 max-w-6xl mx-auto w-full">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                {/* Header */}
+                <div className="mb-16">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="p-3 rounded-lg bg-blue-500/10 text-blue-500">
+                            <Cpu className="w-8 h-8" />
+                        </div>
+                        <div>
+                            <h1 className="text-4xl md:text-5xl font-bold">Eden Trading Ecosystem</h1>
+                            <p className="text-neutral-500 font-mono text-sm mt-1">ALGORITHMIC TRADING / ML</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2 mb-6">
+                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        <span className="text-sm font-mono text-green-500">LIVE IN PRODUCTION</span>
+                    </div>
+                </div>
+
+                {/* Overview */}
+                <section className="mb-16">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <span className="text-blue-500">01.</span> Overview
+                    </h2>
+                    <div className="prose prose-invert prose-lg max-w-none">
+                        <p className="text-neutral-300 leading-relaxed mb-4">
+                            Eden is a <span className="text-white font-semibold">next-generation trading automation ecosystem</span> —
+                            not just a bot, but a fully engineered, multi-layer system that combines machine learning,
+                            advanced price action strategies, and cloud-native infrastructure to deliver institutional-grade
+                            algorithmic trading capabilities.
+                        </p>
+                        <p className="text-neutral-300 leading-relaxed mb-4">
+                            Built from the ground up by a young engineer with deep expertise in Python, FastAPI, AWS, MQL5,
+                            and quantitative finance, Eden represents a breakthrough in <span className="text-white font-semibold">self-optimizing
+                                trading systems</span>. It continuously learns market behavior, prunes underperforming strategies,
+                            and adapts to changing conditions with minimal human intervention.
+                        </p>
+                        <p className="text-neutral-300 leading-relaxed">
+                            Eden integrates ICT (Inner Circle Trader) concepts with statistical models, multi-timeframe analysis,
+                            dynamic strategy selection, and intelligent risk management — all orchestrated through a scalable,
+                            serverless architecture designed for <span className="text-white font-semibold">resilience and performance</span>.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Key Features */}
+                <section className="mb-16">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <span className="text-blue-500">02.</span> Core Capabilities
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {features.map((feature, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.05, duration: 0.3 }}
+                            >
+                                <BentoCard className="h-full">
+                                    <div className="flex items-start gap-3">
+                                        <div className="p-2 rounded-lg bg-white/5 text-blue-500 flex-shrink-0">
+                                            <feature.icon className="w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
+                                            <p className="text-xs text-neutral-400">{feature.desc}</p>
+                                        </div>
+                                    </div>
+                                </BentoCard>
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Tech Stack */}
+                <section className="mb-16">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <span className="text-blue-500">03.</span> Technology Stack
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {techStack.map((category, index) => (
+                            <BentoCard key={index}>
+                                <h3 className="font-mono text-xs text-blue-500 mb-3 uppercase">{category.category}</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {category.items.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-300 bg-white/5"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </BentoCard>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Architecture Highlights */}
+                <section className="mb-16">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <span className="text-blue-500">04.</span> Engineering Excellence
+                    </h2>
+                    <BentoCard>
+                        <div className="space-y-4">
+                            <div className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <h3 className="font-bold text-white mb-1">Self-Optimizing Intelligence</h3>
+                                    <p className="text-sm text-neutral-400">
+                                        Continuously evaluates strategy performance, automatically prunes low-probability setups,
+                                        and optimizes for high-win-rate configurations using machine learning feedback loops.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <h3 className="font-bold text-white mb-1">Cloud-Native Scalability</h3>
+                                    <p className="text-sm text-neutral-400">
+                                        Serverless architecture on AWS enables horizontal scaling, fault tolerance, and
+                                        cost-efficient operation with automated deployment pipelines and infrastructure as code.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <h3 className="font-bold text-white mb-1">Institutional-Grade Risk Management</h3>
+                                    <p className="text-sm text-neutral-400">
+                                        Adaptive position sizing, volatility-adjusted stop losses, scaled take-profit ladders,
+                                        and real-time exposure monitoring ensure capital preservation and consistent returns.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <h3 className="font-bold text-white mb-1">Zero-Downtime Resilience</h3>
+                                    <p className="text-sm text-neutral-400">
+                                        Automated error recovery, health monitoring, diagnostic logging, and auto-restart logic
+                                        ensure the system operates 24/7 with minimal human intervention.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </BentoCard>
+                </section>
+
+                {/* Impact Statement */}
+                <section>
+                    <BentoCard className="bg-gradient-to-br from-blue-500/10 to-violet-500/10 border-blue-500/20">
+                        <div className="text-center py-8">
+                            <h2 className="text-2xl font-bold mb-4">A Fully Engineered Trading Ecosystem</h2>
+                            <p className="text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+                                Eden demonstrates <span className="text-white font-semibold">engineering maturity</span>,
+                                <span className="text-white font-semibold"> algorithmic discipline</span>, and
+                                <span className="text-white font-semibold"> innovation at scale</span>.
+                                It's not just a trading bot — it's a testament to what's possible when deep technical
+                                expertise meets quantitative finance, built by a young engineer pushing the boundaries
+                                of automated trading systems.
+                            </p>
+                        </div>
+                    </BentoCard>
+                </section>
+            </motion.div>
+        </div>
+    );
+}

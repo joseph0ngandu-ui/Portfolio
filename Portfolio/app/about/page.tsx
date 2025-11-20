@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, BookOpen, Code, Server } from "lucide-react";
+import Link from "next/link";
+import { Terminal, BookOpen, Code, Server, Globe } from "lucide-react";
 
 export default function About() {
     return (
@@ -49,26 +50,21 @@ export default function About() {
                         </section>
 
                         <section>
-                            <h2 className="text-xl font-mono text-white mb-4 flex items-center gap-2">
-                                <Code className="w-5 h-5" />
-                                THE_MANIFESTO
-                            </h2>
-                            <div className="bg-white/5 border border-white/10 p-6 rounded-lg font-mono text-sm text-neutral-300">
-                                <ul className="space-y-3">
-                                    <li className="flex gap-3">
-                                        <span className="text-blue-500">01.</span>
-                                        <span>Automation is not optional. It is the standard.</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span className="text-blue-500">02.</span>
-                                        <span>If it breaks, fix it. If it works, scale it.</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span className="text-blue-500">03.</span>
-                                        <span>Latency is the enemy. Efficiency is the goal.</span>
-                                    </li>
-                                </ul>
-                            </div>
+                            <Link href="/about/story" className="block group">
+                                <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/20 p-8 rounded-lg hover:border-green-500/40 transition-all cursor-pointer">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <h2 className="text-xl font-mono text-green-500 flex items-center gap-2">
+                                            <Terminal className="w-5 h-5" />
+                                            READ_MY_STORY
+                                        </h2>
+                                        <span className="text-neutral-500 group-hover:text-white transition-colors">→</span>
+                                    </div>
+                                    <p className="text-neutral-300 leading-relaxed">
+                                        Dive deeper into my journey, what drives me, my engineering philosophy,
+                                        and what I'm looking for in my next opportunity.
+                                    </p>
+                                </div>
+                            </Link>
                         </section>
                     </div>
 
@@ -97,6 +93,17 @@ export default function About() {
                                     </div>
                                     <div className="flex flex-wrap gap-2">
                                         {["Python", "Swift", "MQL5", "SQL", "FastAPI"].map(t => (
+                                            <span key={t} className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-400">{t}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="flex items-center gap-2 mb-2 text-white text-sm font-bold">
+                                        <Globe className="w-4 h-4 text-green-500" />
+                                        WEB DEVELOPMENT STACK
+                                    </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"].map(t => (
                                             <span key={t} className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-400">{t}</span>
                                         ))}
                                     </div>
