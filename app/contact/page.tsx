@@ -38,22 +38,30 @@ export default function Contact() {
             return;
         }
 
+        // Check if all fields are filled FIRST
+        if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+            setSubmitStatus("error");
+            setErrorMessage("Please fill in all fields");
+            return;
+        }
+
         // Validate name
-        const nameValidation = validateInput(formData.name, { maxLength: 100, checkSQL: true });
+        const nameValidation = validateInput(formData.name, { maxLength: 100, minLength: 1, checkSQL: true });
         if (!nameValidation.valid) {
             setSubmitStatus("error");
             setErrorMessage(nameValidation.error || "Invalid name");
             return;
         }
 
-        // Validate email
+        // Validate email format first
         if (!isValidEmail(formData.email)) {
             setSubmitStatus("error");
             setErrorMessage("Please enter a valid email address");
             return;
         }
 
-        const emailValidation = validateInput(formData.email, { maxLength: 254, checkSQL: true });
+        // Then validate email for security
+        const emailValidation = validateInput(formData.email, { maxLength: 254, minLength: 1, checkSQL: true });
         if (!emailValidation.valid) {
             setSubmitStatus("error");
             setErrorMessage(emailValidation.error || "Invalid email");
@@ -61,17 +69,10 @@ export default function Contact() {
         }
 
         // Validate message
-        const messageValidation = validateInput(formData.message, { maxLength: 5000, checkSQL: true });
+        const messageValidation = validateInput(formData.message, { maxLength: 5000, minLength: 1, checkSQL: true });
         if (!messageValidation.valid) {
             setSubmitStatus("error");
             setErrorMessage(messageValidation.error || "Invalid message");
-            return;
-        }
-
-        // Check if all fields are filled
-        if (!nameValidation.sanitized.trim() || !emailValidation.sanitized.trim() || !messageValidation.sanitized.trim()) {
-            setSubmitStatus("error");
-            setErrorMessage("Please fill in all fields");
             return;
         }
 
