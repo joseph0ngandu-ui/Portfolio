@@ -8,6 +8,7 @@ import { checkAdvancedRateLimit, detectSuspiciousActivity } from '@/lib/rate-lim
 const resend = new Resend(process.env.RESEND_API_KEY || 'dummy_key_for_build');
 
 // Allowed origins for CORS
+// Allowed origins for CORS
 const ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://josephngandu.com',
@@ -18,7 +19,11 @@ export async function POST(request: NextRequest) {
     try {
         // CORS check
         const origin = request.headers.get('origin');
-        if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+        // Allow Vercel preview deployments (ending in .vercel.app)
+        const isVercelPreview = origin && origin.endsWith('.vercel.app');
+
+        if (origin && !ALLOWED_ORIGINS.includes(origin) && !isVercelPreview) {
+            console.error(`Blocked CORS origin: ${origin}`);
             return NextResponse.json(
                 { error: 'Unauthorized origin' },
                 { status: 403 }
@@ -212,8 +217,13 @@ export async function POST(request: NextRequest) {
                 }
             );
 
-        } catch (emailError) {
+        } catch (emailError: any) {
             console.error('Resend error:', emailError);
+
+            // Check for specific Resend errors
+            if (emailError?.message?.includes('missing api key')) {
+                console.error('CRITICAL: Resend API key is missing in this environment!');
+            }
 
             // If Resend fails, return a helpful error
             return NextResponse.json(
