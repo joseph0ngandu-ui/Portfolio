@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
     Globe, AlertTriangle, Database, Gauge, MapPin,
     CheckCircle2, Zap, Shield, Radio, Activity,
-    ArrowLeft, Cpu, Bell
+    ArrowLeft, Cpu, Bell, Car, Bot, Smartphone, Link
 } from "lucide-react";
 import BentoCard from "@/components/BentoCard";
 import Link from "next/link";
@@ -301,25 +301,37 @@ export default function SmartCarSafetyPage() {
                     <BentoCard className="bg-gradient-to-br from-violet-500/10 to-blue-500/10 border-violet-500/20">
                         <div className="space-y-4">
                             <div>
-                                <h3 className="font-bold text-white mb-2">🚗 Fleet-Wide Deployment</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Car className="w-5 h-5 text-violet-500" />
+                                    Fleet-Wide Deployment
+                                </h3>
                                 <p className="text-sm text-neutral-400">
                                     Scale from prototype to production deployment across public transport fleets
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">🤖 Predictive Analytics</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Bot className="w-5 h-5 text-violet-500" />
+                                    Predictive Analytics
+                                </h3>
                                 <p className="text-sm text-neutral-400">
                                     Machine learning models to predict high-risk situations before they occur
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">📱 Driver Mobile App</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Smartphone className="w-5 h-5 text-violet-500" />
+                                    Driver Mobile App
+                                </h3>
                                 <p className="text-sm text-neutral-400">
                                     Real-time feedback and coaching for drivers to improve safety scores
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">🔗 National Integration</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Link className="w-5 h-5 text-violet-500" />
+                                    National Integration
+                                </h3>
                                 <p className="text-sm text-neutral-400">
                                     Connect with national traffic management and emergency response systems
                                 </p>

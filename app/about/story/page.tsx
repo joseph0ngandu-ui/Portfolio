@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, Code, BookOpen, Server, ArrowLeft } from "lucide-react";
+import { Terminal, Code, BookOpen, Server, ArrowLeft, Target, Zap, Wrench, Globe } from "lucide-react";
 import Link from "next/link";
 
 export default function StoryPage() {
@@ -58,28 +58,40 @@ export default function StoryPage() {
                         <div className="bg-white/5 border border-white/10 p-6 rounded-lg">
                             <div className="space-y-6">
                                 <div>
-                                    <h3 className="text-white font-bold mb-2">🎯 Impact Over Credentials</h3>
+                                    <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                                        <Target className="w-5 h-5 text-red-500" />
+                                        Impact Over Credentials
+                                    </h3>
                                     <p className="text-sm text-neutral-400">
                                         I measure success by systems shipped, not degrees earned. A working product
                                         deployed to production is worth more than any certificate on a wall.
                                     </p>
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold mb-2">⚡ Speed of Execution</h3>
+                                    <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                                        <Zap className="w-5 h-5 text-yellow-500" />
+                                        Speed of Execution
+                                    </h3>
                                     <p className="text-sm text-neutral-400">
                                         While others are still planning, I'm already building. I prototype fast,
                                         iterate faster, and ship before the competition even starts.
                                     </p>
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold mb-2">🔧 Engineering Excellence</h3>
+                                    <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                                        <Wrench className="w-5 h-5 text-neutral-400" />
+                                        Engineering Excellence
+                                    </h3>
                                     <p className="text-sm text-neutral-400">
                                         I don't build MVPs that break under load. I build systems that scale,
                                         self-heal, and run with minimal intervention. Production-grade from day one.
                                     </p>
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold mb-2">🌍 Solving Real Problems</h3>
+                                    <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                                        <Globe className="w-5 h-5 text-blue-500" />
+                                        Solving Real Problems
+                                    </h3>
                                     <p className="text-sm text-neutral-400">
                                         Every project addresses a genuine need — whether it's financial automation,
                                         education transformation, or road safety. No vanity projects. Just solutions.
