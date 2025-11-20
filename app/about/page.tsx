@@ -24,7 +24,7 @@ export default function About() {
                             </h2>
                             <div className="prose prose-invert prose-lg text-neutral-300">
                                 <p className="leading-relaxed">
-                                    I am a DevOps-driven IT engineer and a second-year student at ZCAS University.
+                                    I am a DevOps-driven IT engineer and a third-year student at ZCAS University.
                                     My expertise lies in optimizing systems end-to-end. I don't just write code;
                                     I build engines that run businesses.
                                 </p>
@@ -45,7 +45,7 @@ export default function About() {
                             <div className="border-l-2 border-white/10 pl-6 py-2">
                                 <h3 className="text-lg font-bold text-white">Bachelor of Science in IT</h3>
                                 <p className="text-neutral-400">ZCAS University</p>
-                                <p className="text-sm font-mono text-neutral-500 mt-1">2023 - PRESENT (YEAR 2)</p>
+                                <p className="text-sm font-mono text-neutral-500 mt-1">2024 - PRESENT (YEAR 3)</p>
                             </div>
                         </section>
 
