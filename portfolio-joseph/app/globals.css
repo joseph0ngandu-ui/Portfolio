@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-jetbrains: var(--font-jetbrains);
+  --font-inter: var(--font-inter);
+  
+  --color-void: #050505;
+  --color-electric: #3b82f6;
+  --color-violet: #8b5cf6;
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+  
+  .glow-border {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+  }
+}
+
+body {
+  background: var(--color-void);
+  color: #e5e5e5;
+  font-family: var(--font-inter), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-mono {
+  font-family: var(--font-jetbrains), monospace;
+}
