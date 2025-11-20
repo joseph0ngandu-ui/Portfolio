@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function StoryPage() {
     return (
-        <div className="pt-32 pb-20 px-4 md:px-8 max-w-4xl mx-auto w-full">
+        <div className="pt-24 md:pt-32 pb-20 px-4 md:px-8 max-w-4xl mx-auto w-full">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

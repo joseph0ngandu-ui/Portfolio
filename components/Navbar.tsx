@@ -22,7 +22,7 @@ export default function Navbar() {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="flex items-center gap-1 px-2 py-2 bg-[#0a0a0a]/80 backdrop-blur-md border border-white/10 rounded-full shadow-lg shadow-black/50"
+                className="flex items-center gap-1 px-1.5 py-1.5 md:px-2 md:py-2 bg-[#0a0a0a]/80 backdrop-blur-md border border-white/10 rounded-full shadow-lg shadow-black/50 max-w-[95vw] overflow-x-auto no-scrollbar"
             >
                 {navItems.map((item) => {
                     const isActive = pathname === item.path;
@@ -31,7 +31,7 @@ export default function Navbar() {
                             key={item.path}
                             href={item.path}
                             className={clsx(
-                                "relative px-4 py-2 text-sm font-mono transition-colors duration-200 rounded-full",
+                                "relative px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-mono transition-colors duration-200 rounded-full whitespace-nowrap",
                                 isActive
                                     ? "text-white"
                                     : "text-neutral-400 hover:text-white"
