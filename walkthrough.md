@@ -5,7 +5,7 @@
 We have successfully hardened the portfolio against cyber threats and made the contact form fully functional.
 
 ### 1. 🛡️ Comprehensive Security Implementation
-- **Input Sanitization**: Implemented `DOMPurify` and custom sanitization to prevent XSS and HTML injection.
+- **Input Sanitization**: Implemented **regex-based sanitization** (replaced `isomorphic-dompurify` to fix Vercel deployment issues) to prevent XSS and HTML injection.
 - **SQL/NoSQL Injection Protection**: Added pattern detection for SQL and NoSQL injection attempts.
 - **Advanced Rate Limiting**:
   - **Tier 1**: 3 requests/minute (Normal)
@@ -26,6 +26,7 @@ We have successfully hardened the portfolio against cyber threats and made the c
 - **Validation Logic**: Corrected the order of validation to prevent "max length" errors on empty fields.
 - **Build Errors**: Resolved build failures caused by missing environment variables during the build process.
 - **Production Email Error**: Diagnosed missing API key in Vercel and created a setup guide.
+- **Vercel Deployment Fix**: Removed `isomorphic-dompurify` dependency which caused `jsdom` errors in Vercel serverless functions.
 
 ## 📂 Key Files Created/Modified
 
@@ -39,10 +40,9 @@ We have successfully hardened the portfolio against cyber threats and made the c
 
 ## 🚀 Immediate Next Steps (Required)
 
-1.  **Fix Production Emails**:
-    - Open `VERCEL_SETUP_GUIDE.md`.
-    - Follow the steps to add `RESEND_API_KEY` to Vercel.
-    - Redeploy your project.
+1.  **Redeploy to Vercel**:
+    - Go to your Vercel dashboard.
+    - Redeploy the project to apply the fix for the `jsdom` error.
 
 2.  **Verify**:
     - Go to your live site.
