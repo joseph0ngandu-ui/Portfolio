@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { sanitizeInput, isValidEmail, validateInput, checkRateLimit } from '@/lib/security';
+import { sanitizeInput, isValidEmail, validateInput } from '@/lib/security';
+import { checkAdvancedRateLimit, detectSuspiciousActivity } from '@/lib/rate-limit';
 
 // Initialize Resend with API key from environment variables
 // Use a dummy key during build if not available
@@ -24,20 +25,38 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Get client IP for rate limiting
-        const ip = request.headers.get('x-forwarded-for') ||
+        // Get client IP and user agent
+        const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
             request.headers.get('x-real-ip') ||
             'unknown';
+        const userAgent = request.headers.get('user-agent') || '';
 
-        // Rate limiting (5 requests per minute per IP)
-        const rateLimitCheck = checkRateLimit(`contact-${ip}`, 5, 60000);
-        if (!rateLimitCheck.allowed) {
+        // Check for suspicious activity
+        const suspiciousCheck = detectSuspiciousActivity(ip, userAgent);
+        if (suspiciousCheck.suspicious) {
+            console.warn(`Suspicious activity from ${ip}: ${suspiciousCheck.reason}`);
             return NextResponse.json(
-                { error: 'Too many requests. Please try again later.' },
+                { error: 'Request rejected' },
+                { status: 403 }
+            );
+        }
+
+        // Advanced rate limiting (strict tier - 3 requests per minute)
+        const rateLimitCheck = checkAdvancedRateLimit(`contact-${ip}`, 'strict');
+        if (!rateLimitCheck.allowed) {
+            console.warn(`Rate limit exceeded for ${ip}: ${rateLimitCheck.reason || 'Too many requests'}`);
+            return NextResponse.json(
+                {
+                    error: rateLimitCheck.blocked
+                        ? 'Your IP has been temporarily blocked due to excessive requests.'
+                        : 'Too many requests. Please try again later.',
+                    retryAfter: Math.ceil(rateLimitCheck.resetIn / 1000)
+                },
                 {
                     status: 429,
                     headers: {
-                        'Retry-After': '60'
+                        'Retry-After': String(Math.ceil(rateLimitCheck.resetIn / 1000)),
+                        'X-RateLimit-Remaining': String(rateLimitCheck.remaining),
                     }
                 }
             );
