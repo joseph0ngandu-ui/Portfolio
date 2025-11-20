@@ -100,10 +100,10 @@ export default function About() {
                                 <div>
                                     <div className="flex items-center gap-2 mb-2 text-white text-sm font-bold">
                                         <Globe className="w-4 h-4 text-green-500" />
-                                        WEB DEVELOPMENT STACK
+                                        WEB DEVELOPMENT
                                     </div>
                                     <div className="flex flex-wrap gap-2">
-                                        {["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"].map(t => (
+                                        {["HTML", "JavaScript", "Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"].map(t => (
                                             <span key={t} className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-400">{t}</span>
                                         ))}
                                     </div>
