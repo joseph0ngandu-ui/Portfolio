@@ -38,7 +38,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <p className="text-xs text-neutral-500 uppercase">Direct Line</p>
-                                <p>joseph@example.com</p>
+                                <p>joseph.0.ngandu@icloud.com</p>
                             </div>
                         </div>
                     </div>

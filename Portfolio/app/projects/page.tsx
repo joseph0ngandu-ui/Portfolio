@@ -47,7 +47,7 @@ export default function Projects() {
             >
                 <h1 className="text-4xl md:text-5xl font-bold mb-2">PROJECT_INDEX</h1>
                 <p className="text-neutral-400 font-mono text-sm mb-12">
-          > ACCESSING ARCHIVES... FOUND {projects.length} ENTRIES
+                    &gt; ACCESSING ARCHIVES... FOUND {projects.length} ENTRIES
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
