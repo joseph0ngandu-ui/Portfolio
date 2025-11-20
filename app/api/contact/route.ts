@@ -3,7 +3,8 @@ import { Resend } from 'resend';
 import { sanitizeInput, isValidEmail, validateInput, checkRateLimit } from '@/lib/security';
 
 // Initialize Resend with API key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Use a dummy key during build if not available
+const resend = new Resend(process.env.RESEND_API_KEY || 'dummy_key_for_build');
 
 // Allowed origins for CORS
 const ALLOWED_ORIGINS = [
@@ -112,6 +113,15 @@ export async function POST(request: NextRequest) {
 
         // Send email using Resend
         try {
+            // Check if API key is configured
+            if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'dummy_key_for_build') {
+                console.error('RESEND_API_KEY not configured');
+                return NextResponse.json(
+                    { error: 'Email service not configured. Please contact directly via email.' },
+                    { status: 503 }
+                );
+            }
+
             const data = await resend.emails.send({
                 from: 'Portfolio Contact <onboarding@resend.dev>', // Use your verified domain
                 to: ['joseph.0.ngandu@icloud.com'], // Your email

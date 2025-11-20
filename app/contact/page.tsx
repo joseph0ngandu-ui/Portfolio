@@ -18,8 +18,12 @@ export default function Contact() {
     const [csrfToken] = useState(() => generateSecureToken());
 
     const handleInputChange = (field: keyof typeof formData, value: string) => {
-        // Sanitize input in real-time
-        const sanitized = sanitizeInput(value);
+        // Only do basic sanitization during typing to preserve user experience
+        // Remove script tags and event handlers, but keep spaces and normal characters
+        let sanitized = value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+        sanitized = sanitized.replace(/on\w+\s*=\s*["'][^"']*["']/gi, '');
+        sanitized = sanitized.replace(/javascript:/gi, '');
+
         setFormData({ ...formData, [field]: sanitized });
     };
 
