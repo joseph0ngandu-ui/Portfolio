@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
     Globe, AlertTriangle, Database, Gauge, MapPin,
     CheckCircle2, Zap, Shield, Radio, Activity,
-    ArrowLeft, Cpu, Bell, Car, Bot, Smartphone, Link
+    ArrowLeft, Cpu, Bell, Car, Bot, Smartphone, Link2
 } from "lucide-react";
 import BentoCard from "@/components/BentoCard";
 import Link from "next/link";
@@ -329,7 +329,7 @@ export default function SmartCarSafetyPage() {
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2 flex items-center gap-2">
-                                    <Link className="w-5 h-5 text-violet-500" />
+                                    <Link2 className="w-5 h-5 text-violet-500" />
                                     National Integration
                                 </h3>
                                 <p className="text-sm text-neutral-400">

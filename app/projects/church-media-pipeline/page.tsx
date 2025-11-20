@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
     Video, Wifi, Cpu, Monitor, Radio, Zap,
     CheckCircle2, TrendingUp, Shield, Clock,
-    ArrowLeft, Settings, Users
+    ArrowLeft, Settings, Users, Cloud, BarChart3, Bot
 } from "lucide-react";
 import BentoCard from "@/components/BentoCard";
 import Link from "next/link";
@@ -312,25 +312,37 @@ export default function ChurchMediaPipelinePage() {
                     <BentoCard className="bg-gradient-to-br from-pink-500/10 to-violet-500/10 border-pink-500/20">
                         <div className="space-y-4">
                             <div>
-                                <h3 className="font-bold text-white mb-2">🎥 Multi-Camera Director Mode</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Video className="w-5 h-5 text-pink-500" />
+                                    Multi-Camera Director Mode
+                                </h3>
                                 <p className="text-sm text-neutral-400">
                                     Automated camera switching based on audio levels and scene detection
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">☁️ Cloud Recording & VOD</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Cloud className="w-5 h-5 text-pink-500" />
+                                    Cloud Recording & VOD
+                                </h3>
                                 <p className="text-sm text-neutral-400">
                                     Automatic upload to cloud storage with on-demand playback and archiving
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">📊 Analytics Dashboard</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <BarChart3 className="w-5 h-5 text-pink-500" />
+                                    Analytics Dashboard
+                                </h3>
                                 <p className="text-sm text-neutral-400">
                                     Real-time viewer metrics, engagement tracking, and performance monitoring
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">🤖 AI-Powered Enhancements</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Bot className="w-5 h-5 text-pink-500" />
+                                    AI-Powered Enhancements
+                                </h3>
                                 <p className="text-sm text-neutral-400">
                                     Automatic captioning, highlight detection, and content optimization
                                 </p>

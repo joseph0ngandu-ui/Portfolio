@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
     Brain, BookOpen, Zap, Database, Shield, Cloud,
     FileText, MessageSquare, Layers, CheckCircle2,
-    Github, ExternalLink, ArrowLeft
+    Github, ExternalLink, ArrowLeft, Smartphone, Handshake, BarChart3, Target
 } from "lucide-react";
 import BentoCard from "@/components/BentoCard";
 import Link from "next/link";
@@ -278,19 +278,31 @@ export default function NeuraNotePage() {
                     <BentoCard className="bg-gradient-to-br from-green-500/10 to-violet-500/10 border-green-500/20">
                         <div className="space-y-4">
                             <div>
-                                <h3 className="font-bold text-white mb-2">📱 Mobile Apps</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Smartphone className="w-5 h-5 text-green-500" />
+                                    Mobile Apps
+                                </h3>
                                 <p className="text-sm text-neutral-400">Native iOS and Android apps for enhanced mobile experience</p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">🤝 Collaborative Study</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Handshake className="w-5 h-5 text-green-500" />
+                                    Collaborative Study
+                                </h3>
                                 <p className="text-sm text-neutral-400">Shared study sets and real-time collaboration features</p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">📊 Advanced Analytics</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <BarChart3 className="w-5 h-5 text-green-500" />
+                                    Advanced Analytics
+                                </h3>
                                 <p className="text-sm text-neutral-400">Learning progress tracking and personalized recommendations</p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">🎯 Spaced Repetition</h3>
+                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                    <Target className="w-5 h-5 text-green-500" />
+                                    Spaced Repetition
+                                </h3>
                                 <p className="text-sm text-neutral-400">AI-optimized flashcard scheduling for better retention</p>
                             </div>
                         </div>

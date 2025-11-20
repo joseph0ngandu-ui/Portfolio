@@ -26,7 +26,10 @@ export default function Navbar() {
                 className="flex items-center gap-1 px-1.5 py-1.5 md:px-2 md:py-2 bg-[#0a0a0a]/80 backdrop-blur-md border border-white/10 rounded-full shadow-lg shadow-black/50 max-w-[95vw] overflow-x-auto no-scrollbar"
             >
                 {navItems.map((item) => {
-                    const isActive = pathname === item.path;
+                    // For home, exact match. For others, check if pathname starts with the path
+                    const isActive = item.path === "/"
+                        ? pathname === "/"
+                        : pathname.startsWith(item.path);
                     return (
                         <Link
                             key={item.path}

@@ -31,16 +31,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Link href="/projects" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto group relative px-6 py-3 bg-white text-black font-mono text-sm font-bold uppercase tracking-wider hover:bg-blue-500 hover:text-white transition-all duration-300">
-                View Projects
-                <span className="absolute inset-0 border border-white group-hover:border-blue-500 translate-x-1 translate-y-1 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none" />
-              </button>
+            <Link href="/projects" className="w-full sm:w-auto group relative px-6 py-3 bg-white text-black font-mono text-sm font-bold uppercase tracking-wider hover:bg-blue-500 hover:text-white transition-all duration-300 inline-flex items-center justify-center">
+              View Projects
+              <span className="absolute inset-0 border border-white group-hover:border-blue-500 translate-x-1 translate-y-1 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none" />
             </Link>
-            <Link href="/contact" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto px-6 py-3 border border-white/20 text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-white/5 transition-colors">
-                Contact Me
-              </button>
+            <Link href="/contact" className="w-full sm:w-auto px-6 py-3 border border-white/20 text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-white/5 transition-colors inline-flex items-center justify-center">
+              Contact Me
             </Link>
           </div>
         </motion.div>
