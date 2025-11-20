@@ -7,15 +7,15 @@ import { Cpu, Globe, Video, Brain, GraduationCap, ArrowUpRight } from "lucide-re
 
 const projects = [
     {
-        title: "Eden Trading Ecosystem",
+        title: "Aurora Trading Ecosystem",
         category: "ALGORITHMIC TRADING / ML",
-        description: "Next-generation trading automation ecosystem with ML-driven strategy discovery, ICT + price action hybrid architecture, multi-timeframe bias engine, and cloud-native infrastructure. Self-optimizing system with automated backtesting, real-time execution, and intelligent risk management.",
+        description: "Next-generation trading automation ecosystem by Eden. Features ML-driven strategy discovery, ICT + price action hybrid architecture, and cloud-native infrastructure. Built on the philosophy: The Origin of Order.",
         stack: ["Python", "FastAPI", "MQL5", "ML/TensorFlow", "AWS", "Docker", "WebSockets", "React Native"],
         icon: Cpu,
         color: "text-blue-500",
         status: "LIVE",
         statusColor: "bg-green-500",
-        link: "/projects/eden"
+        link: "/projects/aurora"
     },
     {
         title: "Smart Car Safety",

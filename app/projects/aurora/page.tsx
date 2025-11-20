@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import BentoCard from "@/components/BentoCard";
 
-export default function EdenProject() {
+export default function AuroraProject() {
     const features = [
         { icon: TrendingUp, title: "Multi-Timeframe Bias Engine", desc: "HTF bias modeling with synchronized analysis" },
         { icon: Brain, title: "ML-Driven Strategy Discovery", desc: "Continuous learning and low-performance pruning" },
@@ -47,8 +47,8 @@ export default function EdenProject() {
                             <Cpu className="w-8 h-8" />
                         </div>
                         <div>
-                            <h1 className="text-4xl md:text-5xl font-bold">Eden Trading Ecosystem</h1>
-                            <p className="text-neutral-500 font-mono text-sm mt-1">ALGORITHMIC TRADING / ML</p>
+                            <h1 className="text-4xl md:text-5xl font-bold">Aurora Trading Ecosystem</h1>
+                            <p className="text-neutral-500 font-mono text-sm mt-1">BUILT BY EDEN | THE ORIGIN OF ORDER</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2 mb-6">
@@ -64,19 +64,19 @@ export default function EdenProject() {
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
                         <p className="text-neutral-300 leading-relaxed mb-4">
-                            Eden is a <span className="text-white font-semibold">next-generation trading automation ecosystem</span> —
-                            not just a bot, but a fully engineered, multi-layer system that combines machine learning,
-                            advanced price action strategies, and cloud-native infrastructure to deliver institutional-grade
-                            algorithmic trading capabilities.
+                            Aurora is the flagship product of <span className="text-white font-semibold">Eden</span> —
+                            a next-generation trading automation ecosystem. It is not just a bot, but a fully engineered,
+                            multi-layer system that combines machine learning, advanced price action strategies, and
+                            cloud-native infrastructure.
                         </p>
                         <p className="text-neutral-300 leading-relaxed mb-4">
-                            Built from the ground up by a young engineer with deep expertise in Python, FastAPI, AWS, MQL5,
-                            and quantitative finance, Eden represents a breakthrough in <span className="text-white font-semibold">self-optimizing
-                                trading systems</span>. It continuously learns market behavior, prunes underperforming strategies,
-                            and adapts to changing conditions with minimal human intervention.
+                            Developed under the Eden philosophy — <span className="text-white font-semibold">"The Origin of Order"</span> —
+                            Aurora represents a breakthrough in <span className="text-white font-semibold">self-optimizing
+                                trading systems</span>. It brings structure to market chaos, continuously learning behavior,
+                            pruning underperforming strategies, and adapting to changing conditions with minimal human intervention.
                         </p>
                         <p className="text-neutral-300 leading-relaxed">
-                            Eden integrates ICT (Inner Circle Trader) concepts with statistical models, multi-timeframe analysis,
+                            Aurora integrates ICT (Inner Circle Trader) concepts with statistical models, multi-timeframe analysis,
                             dynamic strategy selection, and intelligent risk management — all orchestrated through a scalable,
                             serverless architecture designed for <span className="text-white font-semibold">resilience and performance</span>.
                         </p>
@@ -193,12 +193,10 @@ export default function EdenProject() {
                         <div className="text-center py-8">
                             <h2 className="text-2xl font-bold mb-4">A Fully Engineered Trading Ecosystem</h2>
                             <p className="text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-                                Eden demonstrates <span className="text-white font-semibold">engineering maturity</span>,
+                                Aurora demonstrates <span className="text-white font-semibold">engineering maturity</span>,
                                 <span className="text-white font-semibold"> algorithmic discipline</span>, and
                                 <span className="text-white font-semibold"> innovation at scale</span>.
-                                It's not just a trading bot — it's a testament to what's possible when deep technical
-                                expertise meets quantitative finance, built by a young engineer pushing the boundaries
-                                of automated trading systems.
+                                It's not just a trading bot — it's a testament to the vision of Eden: bringing order to the chaos of financial markets through superior engineering.
                             </p>
                         </div>
                     </BentoCard>
