@@ -240,13 +240,11 @@ export default function Contact() {
                                     <div className="p-3 rounded-lg bg-[var(--color-background)] group-hover:bg-[var(--color-surface)] transition-colors">
                                         <Linkedin className="w-6 h-6" />
                                     </div>
-                                    <span className="font-mono">linkedin.com/in/josephngandu</span>
                                 </a>
                                 <a href="https://github.com/joseph0ngandu-ui" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] transition-colors group">
                                     <div className="p-3 rounded-lg bg-[var(--color-background)] group-hover:bg-[var(--color-surface)] transition-colors">
                                         <Github className="w-6 h-6" />
                                     </div>
-                                    <span className="font-mono">github.com/joseph0ngandu-ui</span>
                                 </a>
                             </div>
                         </BentoCard>
