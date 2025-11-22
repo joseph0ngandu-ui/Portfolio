@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, ArrowRight, Cpu, Globe, Database } from "lucide-react";
+import { Terminal, ArrowRight, Cpu, Globe, Database, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import TerminalHero from "@/components/TerminalHero";
 import BentoCard from "@/components/BentoCard";
@@ -108,10 +108,12 @@ export default function Home() {
             © {new Date().getFullYear()} Joseph Ngandu. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="https://github.com/joseph0ngandu-ui" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
+            <a href="https://github.com/joseph0ngandu-ui" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors flex items-center gap-2">
+              <Github className="w-4 h-4" />
               GITHUB
             </a>
-            <a href="https://linkedin.com/in/josephngandu" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
+            <a href="https://linkedin.com/in/josephngandu" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors flex items-center gap-2">
+              <Linkedin className="w-4 h-4" />
               LINKEDIN
             </a>
           </div>
