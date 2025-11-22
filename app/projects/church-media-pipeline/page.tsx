@@ -91,7 +91,7 @@ export default function ChurchMediaPipelinePage() {
                             <Video className="w-8 h-8" />
                         </div>
                         <div>
-                            <h1 className="text-4xl md:text-5xl font-bold">Church Media Pipeline</h1>
+                            <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)]">Church Media Pipeline</h1>
                             <p className="text-[var(--color-text-secondary)] font-mono text-sm mt-1">MEDIA / INFRASTRUCTURE</p>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* Overview */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">01.</span> Overview
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
@@ -126,7 +126,7 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* Problem Statement */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">02.</span> The Problem
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 border-pink-500/20 p-8">
@@ -148,7 +148,7 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* Features */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">03.</span> Key Features
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -165,7 +165,7 @@ export default function ChurchMediaPipelinePage() {
                                             <feature.icon className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
+                                            <h3 className="font-bold text-[var(--color-text-primary)] text-sm mb-1">{feature.title}</h3>
                                             <p className="text-xs text-[var(--color-text-secondary)]">{feature.desc}</p>
                                         </div>
                                     </div>
@@ -177,7 +177,7 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* Tech Stack */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">04.</span> Technology Stack
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -201,13 +201,13 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* Architecture */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">05.</span> System Architecture
                     </h2>
                     <BentoCard className="p-8">
                         <div className="space-y-6">
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Video className="w-5 h-5 text-pink-500" />
                                     Input Layer
                                 </h3>
@@ -217,7 +217,7 @@ export default function ChurchMediaPipelinePage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Cpu className="w-5 h-5 text-pink-500" />
                                     Processing Layer
                                 </h3>
@@ -227,7 +227,7 @@ export default function ChurchMediaPipelinePage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Radio className="w-5 h-5 text-pink-500" />
                                     Streaming Layer
                                 </h3>
@@ -237,7 +237,7 @@ export default function ChurchMediaPipelinePage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Settings className="w-5 h-5 text-pink-500" />
                                     Production Layer
                                 </h3>
@@ -252,7 +252,7 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* My Contributions */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">06.</span> My Role & Contributions
                     </h2>
                     <BentoCard className="p-8">
@@ -269,14 +269,14 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* Innovation Highlights */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">07.</span> Innovation & Key Wins
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {innovations.map((innovation, index) => (
                             <BentoCard key={index} className="p-6">
                                 <innovation.icon className="w-6 h-6 text-pink-500 mb-3" />
-                                <h3 className="font-bold text-white mb-2">{innovation.title}</h3>
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2">{innovation.title}</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">{innovation.desc}</p>
                             </BentoCard>
                         ))}
@@ -285,7 +285,7 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* Impact */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">08.</span> Impact & Results
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -306,13 +306,13 @@ export default function ChurchMediaPipelinePage() {
 
                 {/* Future Roadmap */}
                 <section>
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-pink-500">09.</span> Future Roadmap
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-pink-500/10 to-violet-500/10 border-pink-500/20 p-8">
                         <div className="space-y-4">
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Video className="w-5 h-5 text-pink-500" />
                                     Multi-Camera Director Mode
                                 </h3>
@@ -321,7 +321,7 @@ export default function ChurchMediaPipelinePage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Cloud className="w-5 h-5 text-pink-500" />
                                     Cloud Recording & VOD
                                 </h3>
@@ -330,7 +330,7 @@ export default function ChurchMediaPipelinePage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <BarChart3 className="w-5 h-5 text-pink-500" />
                                     Analytics Dashboard
                                 </h3>
@@ -339,7 +339,7 @@ export default function ChurchMediaPipelinePage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Bot className="w-5 h-5 text-pink-500" />
                                     AI-Powered Enhancements
                                 </h3>

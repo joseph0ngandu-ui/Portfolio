@@ -91,7 +91,7 @@ export default function SmartCarSafetyPage() {
                             <Globe className="w-8 h-8" />
                         </div>
                         <div>
-                            <h1 className="text-4xl md:text-5xl font-bold">Smart Car Safety</h1>
+                            <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)]">Smart Car Safety</h1>
                             <p className="text-[var(--color-text-secondary)] font-mono text-sm mt-1">IOT / SYSTEMS</p>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ export default function SmartCarSafetyPage() {
 
                 {/* Overview */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">01.</span> Overview
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
@@ -126,7 +126,7 @@ export default function SmartCarSafetyPage() {
 
                 {/* Problem Statement */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">02.</span> The Problem
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-violet-500/10 to-red-500/10 border-violet-500/20 p-8">
@@ -146,7 +146,7 @@ export default function SmartCarSafetyPage() {
 
                 {/* Features */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">03.</span> Key Features
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -163,7 +163,7 @@ export default function SmartCarSafetyPage() {
                                             <feature.icon className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
+                                            <h3 className="font-bold text-[var(--color-text-primary)] text-sm mb-1">{feature.title}</h3>
                                             <p className="text-xs text-[var(--color-text-secondary)]">{feature.desc}</p>
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@ export default function SmartCarSafetyPage() {
 
                 {/* Tech Stack */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">04.</span> Technology Stack
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -199,34 +199,34 @@ export default function SmartCarSafetyPage() {
 
                 {/* Architecture */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">05.</span> System Architecture
                     </h2>
                     <BentoCard className="p-8">
                         <div className="space-y-6">
                             <div>
-                                <h3 className="font-bold text-white mb-2">Sensor Layer</h3>
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Sensor Layer</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">
                                     Multi-axis accelerometers, gyroscopes, and GPS modules continuously monitor vehicle dynamics,
                                     detecting sudden impacts, harsh braking, and location changes.
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">Processing Layer</h3>
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Processing Layer</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">
                                     Embedded C++ algorithms analyze sensor data in real-time, identifying accident patterns and
                                     triggering alerts based on configurable thresholds and machine learning models.
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">Communication Layer</h3>
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Communication Layer</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">
                                     Cellular modules transmit critical data to cloud servers and emergency services, with local
                                     storage for offline operation and data redundancy.
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">Integration Layer</h3>
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Integration Layer</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">
                                     APIs connect to RTSA databases for driver verification, fleet management systems for monitoring,
                                     and emergency services for rapid response coordination.
@@ -238,7 +238,7 @@ export default function SmartCarSafetyPage() {
 
                 {/* My Contributions */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">06.</span> My Role & Contributions
                     </h2>
                     <BentoCard className="p-8">
@@ -255,14 +255,14 @@ export default function SmartCarSafetyPage() {
 
                 {/* Innovation Highlights */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">07.</span> Innovation & Key Wins
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {innovations.map((innovation, index) => (
                             <BentoCard key={index} className="p-6">
                                 <innovation.icon className="w-6 h-6 text-violet-500 mb-3" />
-                                <h3 className="font-bold text-white mb-2">{innovation.title}</h3>
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2">{innovation.title}</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">{innovation.desc}</p>
                             </BentoCard>
                         ))}
@@ -271,23 +271,23 @@ export default function SmartCarSafetyPage() {
 
                 {/* Impact */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">08.</span> Potential Impact
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <BentoCard className="text-center p-6">
                             <AlertTriangle className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
-                            <div className="text-2xl font-bold text-white mb-2">Faster Response</div>
+                            <div className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">Faster Response</div>
                             <p className="text-sm text-[var(--color-text-secondary)]">Automatic emergency alerts reduce response time</p>
                         </BentoCard>
                         <BentoCard className="text-center p-6">
                             <Shield className="w-8 h-8 text-green-500 mx-auto mb-3" />
-                            <div className="text-2xl font-bold text-white mb-2">Safer Driving</div>
+                            <div className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">Safer Driving</div>
                             <p className="text-sm text-[var(--color-text-secondary)]">Real-time monitoring improves driver behavior</p>
                         </BentoCard>
                         <BentoCard className="text-center p-6">
                             <Database className="w-8 h-8 text-blue-500 mx-auto mb-3" />
-                            <div className="text-2xl font-bold text-white mb-2">Data-Driven</div>
+                            <div className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">Data-Driven</div>
                             <p className="text-sm text-[var(--color-text-secondary)]">Analytics enable better safety policies</p>
                         </BentoCard>
                     </div>
@@ -295,13 +295,13 @@ export default function SmartCarSafetyPage() {
 
                 {/* Future Roadmap */}
                 <section>
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-violet-500">09.</span> Future Roadmap
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-violet-500/10 to-blue-500/10 border-violet-500/20 p-8">
                         <div className="space-y-4">
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Car className="w-5 h-5 text-violet-500" />
                                     Fleet-Wide Deployment
                                 </h3>
@@ -310,7 +310,7 @@ export default function SmartCarSafetyPage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Bot className="w-5 h-5 text-violet-500" />
                                     Predictive Analytics
                                 </h3>
@@ -319,7 +319,7 @@ export default function SmartCarSafetyPage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Smartphone className="w-5 h-5 text-violet-500" />
                                     Driver Mobile App
                                 </h3>
@@ -328,7 +328,7 @@ export default function SmartCarSafetyPage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Link2 className="w-5 h-5 text-violet-500" />
                                     National Integration
                                 </h3>

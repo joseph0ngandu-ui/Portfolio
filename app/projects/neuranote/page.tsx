@@ -68,7 +68,7 @@ export default function NeuraNotePage() {
                             <Brain className="w-8 h-8" />
                         </div>
                         <div>
-                            <h1 className="text-4xl md:text-5xl font-bold">NeuraNote</h1>
+                            <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)]">NeuraNote</h1>
                             <p className="text-[var(--color-text-secondary)] font-mono text-sm mt-1">AI / FULL-STACK</p>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ export default function NeuraNotePage() {
 
                 {/* Overview */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-green-500">01.</span> Overview
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
@@ -105,7 +105,7 @@ export default function NeuraNotePage() {
 
                 {/* Problem Statement */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-green-500">02.</span> The Problem
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border-green-500/20 p-8">
@@ -125,7 +125,7 @@ export default function NeuraNotePage() {
 
                 {/* Features */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-green-500">03.</span> Key Features
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -142,7 +142,7 @@ export default function NeuraNotePage() {
                                             <feature.icon className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
+                                            <h3 className="font-bold text-[var(--color-text-primary)] text-sm mb-1">{feature.title}</h3>
                                             <p className="text-xs text-[var(--color-text-secondary)]">{feature.desc}</p>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@ export default function NeuraNotePage() {
 
                 {/* Tech Stack */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-green-500">04.</span> Technology Stack
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -178,13 +178,13 @@ export default function NeuraNotePage() {
 
                 {/* Architecture */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-green-500">05.</span> Architecture
                     </h2>
                     <BentoCard className="p-8">
                         <div className="space-y-6">
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Layers className="w-5 h-5 text-green-500" />
                                     Monorepo Structure
                                 </h3>
@@ -202,7 +202,7 @@ export default function NeuraNotePage() {
                                 </div>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">Free-Tier Deployment Strategy</h3>
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Free-Tier Deployment Strategy</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">
                                     Frontend hosted on Vercel, backend on Render, database and auth on Supabase — all using
                                     free tiers with automatic scaling and zero infrastructure costs.
@@ -214,7 +214,7 @@ export default function NeuraNotePage() {
 
                 {/* My Contributions */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-green-500">06.</span> My Role & Contributions
                     </h2>
                     <BentoCard className="p-8">
@@ -231,13 +231,13 @@ export default function NeuraNotePage() {
 
                 {/* Innovation Highlights */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-green-500">07.</span> Innovation & Key Wins
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <BentoCard className="p-6">
                             <Zap className="w-6 h-6 text-yellow-500 mb-3" />
-                            <h3 className="font-bold text-white mb-2">Zero-Cost AI</h3>
+                            <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Zero-Cost AI</h3>
                             <p className="text-sm text-[var(--color-text-secondary)]">
                                 Leveraged local HuggingFace models instead of expensive API calls, making AI features
                                 completely free to run at scale.
@@ -245,7 +245,7 @@ export default function NeuraNotePage() {
                         </BentoCard>
                         <BentoCard className="p-6">
                             <Shield className="w-6 h-6 text-blue-500 mb-3" />
-                            <h3 className="font-bold text-white mb-2">Privacy-First Design</h3>
+                            <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Privacy-First Design</h3>
                             <p className="text-sm text-[var(--color-text-secondary)]">
                                 Client-side OCR and local model inference mean sensitive study materials never leave
                                 the user's device unnecessarily.
@@ -253,7 +253,7 @@ export default function NeuraNotePage() {
                         </BentoCard>
                         <BentoCard className="p-6">
                             <Cloud className="w-6 h-6 text-green-500 mb-3" />
-                            <h3 className="font-bold text-white mb-2">Offline Capability</h3>
+                            <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Offline Capability</h3>
                             <p className="text-sm text-[var(--color-text-secondary)]">
                                 PWA implementation allows students to access saved materials and study offline,
                                 perfect for low-connectivity environments.
@@ -261,7 +261,7 @@ export default function NeuraNotePage() {
                         </BentoCard>
                         <BentoCard className="p-6">
                             <Database className="w-6 h-6 text-violet-500 mb-3" />
-                            <h3 className="font-bold text-white mb-2">Scalable Architecture</h3>
+                            <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Scalable Architecture</h3>
                             <p className="text-sm text-[var(--color-text-secondary)]">
                                 Row-level security and efficient database design ensure the platform can scale
                                 to thousands of users while maintaining data isolation.
@@ -272,34 +272,34 @@ export default function NeuraNotePage() {
 
                 {/* Future Roadmap */}
                 <section>
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-green-500">08.</span> Future Roadmap
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-green-500/10 to-violet-500/10 border-green-500/20 p-8">
                         <div className="space-y-4">
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Smartphone className="w-5 h-5 text-green-500" />
                                     Mobile Apps
                                 </h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">Native iOS and Android apps for enhanced mobile experience</p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Handshake className="w-5 h-5 text-green-500" />
                                     Collaborative Study
                                 </h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">Shared study sets and real-time collaboration features</p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <BarChart3 className="w-5 h-5 text-green-500" />
                                     Advanced Analytics
                                 </h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">Learning progress tracking and personalized recommendations</p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Target className="w-5 h-5 text-green-500" />
                                     Spaced Repetition
                                 </h3>

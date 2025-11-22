@@ -91,7 +91,7 @@ export default function ZEDUPage() {
                             <GraduationCap className="w-8 h-8" />
                         </div>
                         <div>
-                            <h1 className="text-4xl md:text-5xl font-bold">ZEDU</h1>
+                            <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)]">ZEDU</h1>
                             <p className="text-[var(--color-text-secondary)] font-mono text-sm mt-1">EDTECH / AI PLATFORM</p>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ export default function ZEDUPage() {
 
                 {/* Overview */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-orange-500">01.</span> Overview
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
@@ -126,7 +126,7 @@ export default function ZEDUPage() {
 
                 {/* Problem Statement */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-orange-500">02.</span> The Problem
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border-orange-500/20 p-8">
@@ -147,7 +147,7 @@ export default function ZEDUPage() {
 
                 {/* What ZEDU Delivers */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-orange-500">03.</span> What ZEDU Delivers
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -164,7 +164,7 @@ export default function ZEDUPage() {
                                             <feature.icon className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
+                                            <h3 className="font-bold text-[var(--color-text-primary)] text-sm mb-1">{feature.title}</h3>
                                             <p className="text-xs text-[var(--color-text-secondary)]">{feature.desc}</p>
                                         </div>
                                     </div>
@@ -176,7 +176,7 @@ export default function ZEDUPage() {
 
                 {/* Tech Stack */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-orange-500">04.</span> Technology Stack
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -200,7 +200,7 @@ export default function ZEDUPage() {
 
                 {/* My Contributions */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-orange-500">05.</span> My Role & Contributions
                     </h2>
                     <BentoCard className="p-8">
@@ -220,14 +220,14 @@ export default function ZEDUPage() {
 
                 {/* Innovation Highlights */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-orange-500">06.</span> Innovation & Unique Value
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {innovations.map((innovation, index) => (
                             <BentoCard key={index} className="p-6">
                                 <innovation.icon className="w-6 h-6 text-orange-500 mb-3" />
-                                <h3 className="font-bold text-white mb-2">{innovation.title}</h3>
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2">{innovation.title}</h3>
                                 <p className="text-sm text-[var(--color-text-secondary)]">{innovation.desc}</p>
                             </BentoCard>
                         ))}
@@ -236,7 +236,7 @@ export default function ZEDUPage() {
 
                 {/* Key Wins */}
                 <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-orange-500">07.</span> Key Wins
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -257,13 +257,13 @@ export default function ZEDUPage() {
 
                 {/* Future Roadmap */}
                 <section>
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-orange-500">08.</span> Future Roadmap
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-orange-500/10 to-violet-500/10 border-orange-500/20 p-8">
                         <div className="space-y-4">
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Lightbulb className="w-5 h-5 text-yellow-500" />
                                     Parent Portal
                                 </h3>
@@ -272,7 +272,7 @@ export default function ZEDUPage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Lightbulb className="w-5 h-5 text-yellow-500" />
                                     Advanced Analytics Dashboard
                                 </h3>
@@ -281,7 +281,7 @@ export default function ZEDUPage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Lightbulb className="w-5 h-5 text-yellow-500" />
                                     Multi-School Network
                                 </h3>
@@ -290,7 +290,7 @@ export default function ZEDUPage() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-2">
                                     <Lightbulb className="w-5 h-5 text-yellow-500" />
                                     Offline-First Mobile Apps
                                 </h3>
