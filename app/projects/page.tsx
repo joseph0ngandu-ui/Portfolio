@@ -76,7 +76,7 @@ export default function Projects() {
                     &gt; ACCESSING ARCHIVES... FOUND {projects.length} ENTRIES
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -84,11 +84,12 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
+                            className="min-h-[520px]"
                         >
                             <Link href={project.link} className="block h-full">
-                                <BentoCard className="h-full group cursor-pointer hover:border-[var(--color-accent-primary)]/50 p-8">
+                                <BentoCard className="h-full group cursor-pointer hover:border-[var(--color-accent-primary)]/50 p-10">
                                     <div className="flex flex-col h-full">
-                                        <div className="flex items-center justify-between mb-8">
+                                        <div className="flex items-center justify-between mb-10">
                                             <div className="p-4 rounded-xl bg-[var(--color-background)] text-[var(--color-accent-primary)]">
                                                 <project.icon className="w-8 h-8" />
                                             </div>
@@ -98,14 +99,14 @@ export default function Projects() {
                                             </div>
                                         </div>
 
-                                        <h3 className="text-2xl font-bold tracking-tight text-[var(--color-text-primary)] mb-4 group-hover:text-[var(--color-accent-primary)] transition-colors">
+                                        <h3 className="text-2xl font-bold tracking-tight text-[var(--color-text-primary)] mb-5 group-hover:text-[var(--color-accent-primary)] transition-colors">
                                             {project.title}
                                         </h3>
-                                        <p className="text-base text-[var(--color-text-secondary)] mb-6 flex-grow leading-relaxed">
+                                        <p className="text-base text-[var(--color-text-secondary)] mb-8 flex-grow leading-relaxed">
                                             {project.description}
                                         </p>
 
-                                        <div className="flex flex-wrap gap-2 mt-auto">
+                                        <div className="flex flex-wrap gap-2.5 mt-auto">
                                             {project.stack.map((tech, i) => (
                                                 <span key={i} className="px-3 py-1.5 text-xs font-mono rounded bg-[var(--color-background)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
                                                     {tech}
