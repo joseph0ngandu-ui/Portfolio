@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains",
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
@@ -16,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Joseph Ngandu | DevOps Engineer & Full-Stack Developer",
-  description: "DevOps-driven IT engineer specializing in cloud infrastructure, AI/ML integration, and full-stack development. Building production-grade systems that scale.",
+  title: "Joseph Ngandu - Software Engineer",
+  description: "Automation engineer, full-stack developer, and systems architect",
   keywords: ["DevOps", "Cloud Infrastructure", "AWS", "Full-Stack Developer", "AI/ML", "Next.js", "Python", "FastAPI", "Zambia"],
   authors: [{ name: "Joseph Ngandu" }],
   creator: "Joseph Ngandu",
@@ -55,8 +56,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable} ${inter.variable} antialiased selection:bg-[#C3B091] selection:text-white`}
+        className={`${jetbrainsMono.variable} ${inter.variable} antialiased`}
       >
+        <AnimatedBackground />
         <Navbar />
         <main className="min-h-screen flex flex-col">
           {children}

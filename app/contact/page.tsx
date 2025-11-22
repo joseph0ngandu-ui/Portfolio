@@ -242,28 +242,13 @@ export default function Contact() {
                                     </div>
                                     <span className="font-mono">linkedin.com/in/josephngandu</span>
                                 </a>
-                                <a href="https://github.com/joseph0ngandu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] transition-colors group">
+                                <a href="https://github.com/joseph0ngandu-ui" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] transition-colors group">
                                     <div className="p-3 rounded-lg bg-[var(--color-background)] group-hover:bg-[var(--color-surface)] transition-colors">
                                         <Github className="w-6 h-6" />
                                     </div>
-                                    <span className="font-mono">github.com/joseph0ngandu</span>
+                                    <span className="font-mono">github.com/joseph0ngandu-ui</span>
                                 </a>
                             </div>
-                        </BentoCard>
-
-                        <BentoCard className="p-8 bg-[var(--color-accent-primary)]/5 border-[var(--color-accent-primary)]/20">
-                            <h3 className="text-xl font-bold tracking-tight text-[var(--color-text-primary)] mb-4">Availability Status</h3>
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="relative flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                                </span>
-                                <span className="font-mono text-green-600 font-bold">OPEN FOR WORK</span>
-                            </div>
-                            <p className="text-sm text-[var(--color-text-secondary)]">
-                                I am currently available for freelance projects and full-time opportunities.
-                                Let's build something great together.
-                            </p>
                         </BentoCard>
                     </motion.div>
                 </div>
