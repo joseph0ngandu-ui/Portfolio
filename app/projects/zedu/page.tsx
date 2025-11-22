@@ -79,7 +79,7 @@ export default function ZEDUPage() {
                 transition={{ duration: 0.5 }}
             >
                 {/* Back Button */}
-                <Link href="/projects" className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8">
+                <Link href="/projects" className="inline-flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors mb-8">
                     <ArrowLeft className="w-4 h-4" />
                     <span className="text-sm font-mono">Back to Projects</span>
                 </Link>
@@ -92,14 +92,14 @@ export default function ZEDUPage() {
                         </div>
                         <div>
                             <h1 className="text-4xl md:text-5xl font-bold">ZEDU</h1>
-                            <p className="text-neutral-500 font-mono text-sm mt-1">EDTECH / AI PLATFORM</p>
+                            <p className="text-[var(--color-text-secondary)] font-mono text-sm mt-1">EDTECH / AI PLATFORM</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2 mb-6">
                         <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
                         <span className="text-sm font-mono text-orange-500">IN PRODUCTION</span>
                     </div>
-                    <p className="text-lg text-neutral-300 max-w-3xl">
+                    <p className="text-lg text-[var(--color-text-secondary)] max-w-3xl">
                         A next-generation, AI-powered education platform modernizing how Zambian schools operate.
                         Designed and engineered end-to-end to drive digital transformation in education.
                     </p>
@@ -111,13 +111,13 @@ export default function ZEDUPage() {
                         <span className="text-orange-500">01.</span> Overview
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
-                        <p className="text-neutral-300 leading-relaxed mb-4">
-                            ZEDU is a <span className="text-white font-semibold">comprehensive education platform</span> I'm building
+                        <p className="text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                            ZEDU is a <span className="text-[var(--color-text-primary)] font-semibold">comprehensive education platform</span> I'm building
                             to modernize Zambian schools. I'm driving the system architecture, product direction, and technical
                             implementation from the ground up.
                         </p>
-                        <p className="text-neutral-300 leading-relaxed">
-                            This isn't just another school management app — it's a <span className="text-white font-semibold">digital
+                        <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                            This isn't just another school management app — it's a <span className="text-[var(--color-text-primary)] font-semibold">digital
                                 transformation lever</span> that streamlines operations, empowers teachers with AI-driven insights,
                             and provides students with personalized learning experiences.
                         </p>
@@ -131,12 +131,12 @@ export default function ZEDUPage() {
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border-orange-500/20 p-8">
                         <div className="space-y-4">
-                            <p className="text-neutral-300 leading-relaxed">
+                            <p className="text-[var(--color-text-secondary)] leading-relaxed">
                                 Zambian schools struggle with manual processes for attendance, grading, and student tracking.
                                 Teachers spend hours on administrative tasks instead of teaching. Students lack personalized
                                 feedback and learning support. Schools have no unified system for data-driven decision making.
                             </p>
-                            <p className="text-white font-semibold">
+                            <p className="text-[var(--color-text-primary)] font-semibold">
                                 ZEDU solves this by providing an integrated platform that automates operations, delivers
                                 AI-powered insights, and scales with each institution — all while being accessible and
                                 easy to adopt for schools with limited technical resources.
@@ -160,12 +160,12 @@ export default function ZEDUPage() {
                             >
                                 <BentoCard className="h-full p-5">
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 rounded-lg bg-white/5 text-orange-500 flex-shrink-0">
+                                        <div className="p-2 rounded-lg bg-[var(--color-surface)] text-orange-500 flex-shrink-0">
                                             <feature.icon className="w-5 h-5" />
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
-                                            <p className="text-xs text-neutral-400">{feature.desc}</p>
+                                            <p className="text-xs text-[var(--color-text-secondary)]">{feature.desc}</p>
                                         </div>
                                     </div>
                                 </BentoCard>
@@ -187,7 +187,7 @@ export default function ZEDUPage() {
                                     {category.items.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-300 bg-white/5"
+                                            className="text-xs border border-[var(--color-border)] px-2 py-1 rounded text-[var(--color-text-secondary)] bg-[var(--color-surface)]"
                                         >
                                             {tech}
                                         </span>
@@ -204,14 +204,14 @@ export default function ZEDUPage() {
                         <span className="text-orange-500">05.</span> My Role & Contributions
                     </h2>
                     <BentoCard className="p-8">
-                        <p className="text-neutral-400 mb-6 text-sm">
+                        <p className="text-[var(--color-text-secondary)] mb-6 text-sm">
                             As the lead engineer and architect, I'm responsible for every aspect of ZEDU's development:
                         </p>
                         <div className="space-y-3">
                             {contributions.map((contribution, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                                    <p className="text-sm text-neutral-300">{contribution}</p>
+                                    <p className="text-sm text-[var(--color-text-secondary)]">{contribution}</p>
                                 </div>
                             ))}
                         </div>
@@ -228,7 +228,7 @@ export default function ZEDUPage() {
                             <BentoCard key={index} className="p-6">
                                 <innovation.icon className="w-6 h-6 text-orange-500 mb-3" />
                                 <h3 className="font-bold text-white mb-2">{innovation.title}</h3>
-                                <p className="text-sm text-neutral-400">{innovation.desc}</p>
+                                <p className="text-sm text-[var(--color-text-secondary)]">{innovation.desc}</p>
                             </BentoCard>
                         ))}
                     </div>
@@ -242,15 +242,15 @@ export default function ZEDUPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-orange-500 mb-2">100%</div>
-                            <p className="text-sm text-neutral-400">Designed & Built by Me</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Designed & Built by Me</p>
                         </BentoCard>
                         <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-orange-500 mb-2">Scalable</div>
-                            <p className="text-sm text-neutral-400">Grows with Each Institution</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Grows with Each Institution</p>
                         </BentoCard>
                         <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-orange-500 mb-2">AI-First</div>
-                            <p className="text-sm text-neutral-400">Smart Automation Built-In</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Smart Automation Built-In</p>
                         </BentoCard>
                     </div>
                 </section>
@@ -267,7 +267,7 @@ export default function ZEDUPage() {
                                     <Lightbulb className="w-5 h-5 text-yellow-500" />
                                     Parent Portal
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Real-time access to student progress, attendance, and communication with teachers
                                 </p>
                             </div>
@@ -276,7 +276,7 @@ export default function ZEDUPage() {
                                     <Lightbulb className="w-5 h-5 text-yellow-500" />
                                     Advanced Analytics Dashboard
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Predictive insights for student performance and early intervention recommendations
                                 </p>
                             </div>
@@ -285,7 +285,7 @@ export default function ZEDUPage() {
                                     <Lightbulb className="w-5 h-5 text-yellow-500" />
                                     Multi-School Network
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     District-level administration and cross-school benchmarking capabilities
                                 </p>
                             </div>
@@ -294,7 +294,7 @@ export default function ZEDUPage() {
                                     <Lightbulb className="w-5 h-5 text-yellow-500" />
                                     Offline-First Mobile Apps
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Native apps with full offline support for low-connectivity environments
                                 </p>
                             </div>

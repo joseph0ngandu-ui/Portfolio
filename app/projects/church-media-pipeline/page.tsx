@@ -79,7 +79,7 @@ export default function ChurchMediaPipelinePage() {
                 transition={{ duration: 0.5 }}
             >
                 {/* Back Button */}
-                <Link href="/projects" className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8">
+                <Link href="/projects" className="inline-flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors mb-8">
                     <ArrowLeft className="w-4 h-4" />
                     <span className="text-sm font-mono">Back to Projects</span>
                 </Link>
@@ -92,14 +92,14 @@ export default function ChurchMediaPipelinePage() {
                         </div>
                         <div>
                             <h1 className="text-4xl md:text-5xl font-bold">Church Media Pipeline</h1>
-                            <p className="text-neutral-500 font-mono text-sm mt-1">MEDIA / INFRASTRUCTURE</p>
+                            <p className="text-[var(--color-text-secondary)] font-mono text-sm mt-1">MEDIA / INFRASTRUCTURE</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2 mb-6">
                         <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                         <span className="text-sm font-mono text-blue-500">PRODUCTION</span>
                     </div>
-                    <p className="text-lg text-neutral-300 max-w-3xl">
+                    <p className="text-lg text-[var(--color-text-secondary)] max-w-3xl">
                         A low-latency, resource-efficient streaming architecture built for high-quality live broadcasts
                         using OBS, DroidCam, and optimized production engineering.
                     </p>
@@ -111,13 +111,13 @@ export default function ChurchMediaPipelinePage() {
                         <span className="text-pink-500">01.</span> Overview
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
-                        <p className="text-neutral-300 leading-relaxed mb-4">
-                            The Church Media Pipeline is a <span className="text-white font-semibold">professional-grade streaming
+                        <p className="text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                            The Church Media Pipeline is a <span className="text-[var(--color-text-primary)] font-semibold">professional-grade streaming
                                 infrastructure</span> I engineered to deliver high-quality live broadcasts with minimal latency and
                             maximum reliability — all while running on consumer hardware.
                         </p>
-                        <p className="text-neutral-300 leading-relaxed">
-                            This project demonstrates how <span className="text-white font-semibold">smart engineering and optimization</span> can
+                        <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                            This project demonstrates how <span className="text-[var(--color-text-primary)] font-semibold">smart engineering and optimization</span> can
                             achieve broadcast-quality results without expensive equipment, making professional media production
                             accessible to organizations with limited budgets.
                         </p>
@@ -131,13 +131,13 @@ export default function ChurchMediaPipelinePage() {
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 border-pink-500/20 p-8">
                         <div className="space-y-4">
-                            <p className="text-neutral-300 leading-relaxed">
+                            <p className="text-[var(--color-text-secondary)] leading-relaxed">
                                 Churches and community organizations need to reach remote audiences through live streaming,
                                 but professional broadcast equipment is prohibitively expensive. Existing solutions either
                                 compromise on quality, introduce significant latency, or require technical expertise beyond
                                 what volunteer teams can provide.
                             </p>
-                            <p className="text-white font-semibold">
+                            <p className="text-[var(--color-text-primary)] font-semibold">
                                 The Church Media Pipeline solves this by leveraging open-source tools, hardware acceleration,
                                 and network optimization to deliver professional results on a minimal budget — with a system
                                 simple enough for volunteers to operate.
@@ -161,12 +161,12 @@ export default function ChurchMediaPipelinePage() {
                             >
                                 <BentoCard className="h-full p-5">
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 rounded-lg bg-white/5 text-pink-500 flex-shrink-0">
+                                        <div className="p-2 rounded-lg bg-[var(--color-surface)] text-pink-500 flex-shrink-0">
                                             <feature.icon className="w-5 h-5" />
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
-                                            <p className="text-xs text-neutral-400">{feature.desc}</p>
+                                            <p className="text-xs text-[var(--color-text-secondary)]">{feature.desc}</p>
                                         </div>
                                     </div>
                                 </BentoCard>
@@ -188,7 +188,7 @@ export default function ChurchMediaPipelinePage() {
                                     {category.items.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-300 bg-white/5"
+                                            className="text-xs border border-[var(--color-border)] px-2 py-1 rounded text-[var(--color-text-secondary)] bg-[var(--color-surface)]"
                                         >
                                             {tech}
                                         </span>
@@ -211,7 +211,7 @@ export default function ChurchMediaPipelinePage() {
                                     <Video className="w-5 h-5 text-pink-500" />
                                     Input Layer
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Multiple camera sources including DroidCam for wireless mobile inputs, HDMI capture cards
                                     for professional cameras, and screen capture for presentations — all synchronized in OBS.
                                 </p>
@@ -221,7 +221,7 @@ export default function ChurchMediaPipelinePage() {
                                     <Cpu className="w-5 h-5 text-pink-500" />
                                     Processing Layer
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Hardware-accelerated encoding using NVENC (NVIDIA) or QuickSync (Intel) for real-time
                                     compression with minimal CPU overhead, enabling smooth streaming even on modest hardware.
                                 </p>
@@ -231,7 +231,7 @@ export default function ChurchMediaPipelinePage() {
                                     <Radio className="w-5 h-5 text-pink-500" />
                                     Streaming Layer
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     RTMP protocol with adaptive bitrate streaming to multiple platforms simultaneously,
                                     with automatic quality adjustment based on network conditions.
                                 </p>
@@ -241,7 +241,7 @@ export default function ChurchMediaPipelinePage() {
                                     <Settings className="w-5 h-5 text-pink-500" />
                                     Production Layer
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Automated scene transitions, audio mixing, and graphics overlays controlled through
                                     hotkeys and macros for seamless live production.
                                 </p>
@@ -260,7 +260,7 @@ export default function ChurchMediaPipelinePage() {
                             {contributions.map((contribution, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-pink-500 flex-shrink-0 mt-0.5" />
-                                    <p className="text-sm text-neutral-300">{contribution}</p>
+                                    <p className="text-sm text-[var(--color-text-secondary)]">{contribution}</p>
                                 </div>
                             ))}
                         </div>
@@ -277,7 +277,7 @@ export default function ChurchMediaPipelinePage() {
                             <BentoCard key={index} className="p-6">
                                 <innovation.icon className="w-6 h-6 text-pink-500 mb-3" />
                                 <h3 className="font-bold text-white mb-2">{innovation.title}</h3>
-                                <p className="text-sm text-neutral-400">{innovation.desc}</p>
+                                <p className="text-sm text-[var(--color-text-secondary)]">{innovation.desc}</p>
                             </BentoCard>
                         ))}
                     </div>
@@ -291,15 +291,15 @@ export default function ChurchMediaPipelinePage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-pink-500 mb-2">1080p</div>
-                            <p className="text-sm text-neutral-400">Full HD Quality Streaming</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Full HD Quality Streaming</p>
                         </BentoCard>
                         <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-pink-500 mb-2">&lt;1s</div>
-                            <p className="text-sm text-neutral-400">Sub-Second Latency</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Sub-Second Latency</p>
                         </BentoCard>
                         <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-pink-500 mb-2">99.9%</div>
-                            <p className="text-sm text-neutral-400">Uptime Reliability</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Uptime Reliability</p>
                         </BentoCard>
                     </div>
                 </section>
@@ -316,7 +316,7 @@ export default function ChurchMediaPipelinePage() {
                                     <Video className="w-5 h-5 text-pink-500" />
                                     Multi-Camera Director Mode
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Automated camera switching based on audio levels and scene detection
                                 </p>
                             </div>
@@ -325,7 +325,7 @@ export default function ChurchMediaPipelinePage() {
                                     <Cloud className="w-5 h-5 text-pink-500" />
                                     Cloud Recording & VOD
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Automatic upload to cloud storage with on-demand playback and archiving
                                 </p>
                             </div>
@@ -334,7 +334,7 @@ export default function ChurchMediaPipelinePage() {
                                     <BarChart3 className="w-5 h-5 text-pink-500" />
                                     Analytics Dashboard
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Real-time viewer metrics, engagement tracking, and performance monitoring
                                 </p>
                             </div>
@@ -343,7 +343,7 @@ export default function ChurchMediaPipelinePage() {
                                     <Bot className="w-5 h-5 text-pink-500" />
                                     AI-Powered Enhancements
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Automatic captioning, highlight detection, and content optimization
                                 </p>
                             </div>

@@ -56,7 +56,7 @@ export default function NeuraNotePage() {
                 transition={{ duration: 0.5 }}
             >
                 {/* Back Button */}
-                <Link href="/projects" className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8">
+                <Link href="/projects" className="inline-flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors mb-8">
                     <ArrowLeft className="w-4 h-4" />
                     <span className="text-sm font-mono">Back to Projects</span>
                 </Link>
@@ -69,7 +69,7 @@ export default function NeuraNotePage() {
                         </div>
                         <div>
                             <h1 className="text-4xl md:text-5xl font-bold">NeuraNote</h1>
-                            <p className="text-neutral-500 font-mono text-sm mt-1">AI / FULL-STACK</p>
+                            <p className="text-[var(--color-text-secondary)] font-mono text-sm mt-1">AI / FULL-STACK</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-4 mb-6">
@@ -77,7 +77,7 @@ export default function NeuraNotePage() {
                             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
                             <span className="text-sm font-mono text-orange-500">IN PRODUCTION</span>
                         </div>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
                             <Github className="w-4 h-4" />
                             View Source
                         </a>
@@ -90,14 +90,14 @@ export default function NeuraNotePage() {
                         <span className="text-green-500">01.</span> Overview
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
-                        <p className="text-neutral-300 leading-relaxed mb-4">
-                            NeuraNote is an <span className="text-white font-semibold">open-source, AI-powered study assistant</span> that
+                        <p className="text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                            NeuraNote is an <span className="text-[var(--color-text-primary)] font-semibold">open-source, AI-powered study assistant</span> that
                             helps students learn more efficiently by automatically summarizing notes, generating practice quizzes,
                             and creating flashcards from any uploaded content.
                         </p>
-                        <p className="text-neutral-300 leading-relaxed">
+                        <p className="text-[var(--color-text-secondary)] leading-relaxed">
                             Built as a complete full-stack application, NeuraNote demonstrates how modern AI capabilities can be
-                            deployed entirely on <span className="text-white font-semibold">free-tier infrastructure</span>, making
+                            deployed entirely on <span className="text-[var(--color-text-primary)] font-semibold">free-tier infrastructure</span>, making
                             powerful study tools accessible to everyone without subscription costs.
                         </p>
                     </div>
@@ -110,12 +110,12 @@ export default function NeuraNotePage() {
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border-green-500/20 p-8">
                         <div className="space-y-4">
-                            <p className="text-neutral-300 leading-relaxed">
+                            <p className="text-[var(--color-text-secondary)] leading-relaxed">
                                 Students spend countless hours manually creating study materials from lecture notes, textbooks,
                                 and presentations. Existing AI study tools are either expensive, require subscriptions, or lack
                                 essential features like offline support and privacy.
                             </p>
-                            <p className="text-white font-semibold">
+                            <p className="text-[var(--color-text-primary)] font-semibold">
                                 NeuraNote solves this by providing a free, open-source platform that runs AI models locally
                                 or on free cloud tiers, ensuring both cost-effectiveness and data privacy.
                             </p>
@@ -138,12 +138,12 @@ export default function NeuraNotePage() {
                             >
                                 <BentoCard className="h-full p-5">
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 rounded-lg bg-white/5 text-green-500 flex-shrink-0">
+                                        <div className="p-2 rounded-lg bg-[var(--color-surface)] text-green-500 flex-shrink-0">
                                             <feature.icon className="w-5 h-5" />
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
-                                            <p className="text-xs text-neutral-400">{feature.desc}</p>
+                                            <p className="text-xs text-[var(--color-text-secondary)]">{feature.desc}</p>
                                         </div>
                                     </div>
                                 </BentoCard>
@@ -165,7 +165,7 @@ export default function NeuraNotePage() {
                                     {category.items.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-300 bg-white/5"
+                                            className="text-xs border border-[var(--color-border)] px-2 py-1 rounded text-[var(--color-text-secondary)] bg-[var(--color-surface)]"
                                         >
                                             {tech}
                                         </span>
@@ -188,22 +188,22 @@ export default function NeuraNotePage() {
                                     <Layers className="w-5 h-5 text-green-500" />
                                     Monorepo Structure
                                 </h3>
-                                <p className="text-sm text-neutral-400 mb-3">
+                                <p className="text-sm text-[var(--color-text-secondary)] mb-3">
                                     Organized as a monorepo with separate frontend and backend directories, shared documentation,
                                     and unified CI/CD pipelines for streamlined development.
                                 </p>
-                                <div className="bg-black/50 border border-white/10 rounded p-4 font-mono text-xs text-neutral-300">
+                                <div className="bg-[var(--color-background)] border border-[var(--color-border)] rounded p-4 font-mono text-xs text-[var(--color-text-secondary)]">
                                     <div>NeuraNote/</div>
-                                    <div className="ml-4">├── frontend/ <span className="text-neutral-500"># Next.js app</span></div>
-                                    <div className="ml-4">├── backend/ <span className="text-neutral-500"># FastAPI + ML models</span></div>
-                                    <div className="ml-4">├── docs/ <span className="text-neutral-500"># Documentation</span></div>
-                                    <div className="ml-4">├── .github/workflows/ <span className="text-neutral-500"># CI/CD</span></div>
-                                    <div className="ml-4">└── docker-compose.yml <span className="text-neutral-500"># Local dev</span></div>
+                                    <div className="ml-4">├── frontend/ <span className="text-[var(--color-text-secondary)]"># Next.js app</span></div>
+                                    <div className="ml-4">├── backend/ <span className="text-[var(--color-text-secondary)]"># FastAPI + ML models</span></div>
+                                    <div className="ml-4">├── docs/ <span className="text-[var(--color-text-secondary)]"># Documentation</span></div>
+                                    <div className="ml-4">├── .github/workflows/ <span className="text-[var(--color-text-secondary)]"># CI/CD</span></div>
+                                    <div className="ml-4">└── docker-compose.yml <span className="text-[var(--color-text-secondary)]"># Local dev</span></div>
                                 </div>
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2">Free-Tier Deployment Strategy</h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Frontend hosted on Vercel, backend on Render, database and auth on Supabase — all using
                                     free tiers with automatic scaling and zero infrastructure costs.
                                 </p>
@@ -222,7 +222,7 @@ export default function NeuraNotePage() {
                             {contributions.map((contribution, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                    <p className="text-sm text-neutral-300">{contribution}</p>
+                                    <p className="text-sm text-[var(--color-text-secondary)]">{contribution}</p>
                                 </div>
                             ))}
                         </div>
@@ -238,7 +238,7 @@ export default function NeuraNotePage() {
                         <BentoCard className="p-6">
                             <Zap className="w-6 h-6 text-yellow-500 mb-3" />
                             <h3 className="font-bold text-white mb-2">Zero-Cost AI</h3>
-                            <p className="text-sm text-neutral-400">
+                            <p className="text-sm text-[var(--color-text-secondary)]">
                                 Leveraged local HuggingFace models instead of expensive API calls, making AI features
                                 completely free to run at scale.
                             </p>
@@ -246,7 +246,7 @@ export default function NeuraNotePage() {
                         <BentoCard className="p-6">
                             <Shield className="w-6 h-6 text-blue-500 mb-3" />
                             <h3 className="font-bold text-white mb-2">Privacy-First Design</h3>
-                            <p className="text-sm text-neutral-400">
+                            <p className="text-sm text-[var(--color-text-secondary)]">
                                 Client-side OCR and local model inference mean sensitive study materials never leave
                                 the user's device unnecessarily.
                             </p>
@@ -254,7 +254,7 @@ export default function NeuraNotePage() {
                         <BentoCard className="p-6">
                             <Cloud className="w-6 h-6 text-green-500 mb-3" />
                             <h3 className="font-bold text-white mb-2">Offline Capability</h3>
-                            <p className="text-sm text-neutral-400">
+                            <p className="text-sm text-[var(--color-text-secondary)]">
                                 PWA implementation allows students to access saved materials and study offline,
                                 perfect for low-connectivity environments.
                             </p>
@@ -262,7 +262,7 @@ export default function NeuraNotePage() {
                         <BentoCard className="p-6">
                             <Database className="w-6 h-6 text-violet-500 mb-3" />
                             <h3 className="font-bold text-white mb-2">Scalable Architecture</h3>
-                            <p className="text-sm text-neutral-400">
+                            <p className="text-sm text-[var(--color-text-secondary)]">
                                 Row-level security and efficient database design ensure the platform can scale
                                 to thousands of users while maintaining data isolation.
                             </p>
@@ -282,28 +282,28 @@ export default function NeuraNotePage() {
                                     <Smartphone className="w-5 h-5 text-green-500" />
                                     Mobile Apps
                                 </h3>
-                                <p className="text-sm text-neutral-400">Native iOS and Android apps for enhanced mobile experience</p>
+                                <p className="text-sm text-[var(--color-text-secondary)]">Native iOS and Android apps for enhanced mobile experience</p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2 flex items-center gap-2">
                                     <Handshake className="w-5 h-5 text-green-500" />
                                     Collaborative Study
                                 </h3>
-                                <p className="text-sm text-neutral-400">Shared study sets and real-time collaboration features</p>
+                                <p className="text-sm text-[var(--color-text-secondary)]">Shared study sets and real-time collaboration features</p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2 flex items-center gap-2">
                                     <BarChart3 className="w-5 h-5 text-green-500" />
                                     Advanced Analytics
                                 </h3>
-                                <p className="text-sm text-neutral-400">Learning progress tracking and personalized recommendations</p>
+                                <p className="text-sm text-[var(--color-text-secondary)]">Learning progress tracking and personalized recommendations</p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2 flex items-center gap-2">
                                     <Target className="w-5 h-5 text-green-500" />
                                     Spaced Repetition
                                 </h3>
-                                <p className="text-sm text-neutral-400">AI-optimized flashcard scheduling for better retention</p>
+                                <p className="text-sm text-[var(--color-text-secondary)]">AI-optimized flashcard scheduling for better retention</p>
                             </div>
                         </div>
                     </BentoCard>

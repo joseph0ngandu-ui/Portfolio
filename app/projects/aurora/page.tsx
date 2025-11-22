@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import {
     Cpu, TrendingUp, Brain, Cloud, Shield, Zap,
     BarChart3, GitBranch, Database, Smartphone,
-    Activity, Lock, RefreshCw, CheckCircle2
+    Activity, Lock, RefreshCw, CheckCircle2, ArrowLeft
 } from "lucide-react";
 import BentoCard from "@/components/BentoCard";
+import Link from "next/link";
 
 export default function AuroraProject() {
     const features = [
@@ -40,6 +41,12 @@ export default function AuroraProject() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
+                {/* Back Button */}
+                <Link href="/projects" className="inline-flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors mb-8">
+                    <ArrowLeft className="w-4 h-4" />
+                    <span className="text-sm font-mono">Back to Projects</span>
+                </Link>
+
                 {/* Header */}
                 <div className="mb-16">
                     <div className="flex items-center gap-3 mb-4">

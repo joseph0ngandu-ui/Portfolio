@@ -79,7 +79,7 @@ export default function SmartCarSafetyPage() {
                 transition={{ duration: 0.5 }}
             >
                 {/* Back Button */}
-                <Link href="/projects" className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8">
+                <Link href="/projects" className="inline-flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors mb-8">
                     <ArrowLeft className="w-4 h-4" />
                     <span className="text-sm font-mono">Back to Projects</span>
                 </Link>
@@ -92,14 +92,14 @@ export default function SmartCarSafetyPage() {
                         </div>
                         <div>
                             <h1 className="text-4xl md:text-5xl font-bold">Smart Car Safety</h1>
-                            <p className="text-neutral-500 font-mono text-sm mt-1">IOT / SYSTEMS</p>
+                            <p className="text-[var(--color-text-secondary)] font-mono text-sm mt-1">IOT / SYSTEMS</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2 mb-6">
                         <span className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse" />
                         <span className="text-sm font-mono text-yellow-500">PROTOTYPE</span>
                     </div>
-                    <p className="text-lg text-neutral-300 max-w-3xl">
+                    <p className="text-lg text-[var(--color-text-secondary)] max-w-3xl">
                         An IoT-based safety system for public transport vehicles, developed as a prototype for
                         Zambia's Road Transport and Safety Agency (RTSA) to improve road safety and compliance.
                     </p>
@@ -111,13 +111,13 @@ export default function SmartCarSafetyPage() {
                         <span className="text-violet-500">01.</span> Overview
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none">
-                        <p className="text-neutral-300 leading-relaxed mb-4">
-                            Smart Car Safety is an <span className="text-white font-semibold">IoT-based monitoring system</span> designed
+                        <p className="text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                            Smart Car Safety is an <span className="text-[var(--color-text-primary)] font-semibold">IoT-based monitoring system</span> designed
                             to enhance safety in public transport vehicles. The system combines hardware sensors with intelligent
                             software to detect accidents, monitor driver behavior, and ensure regulatory compliance.
                         </p>
-                        <p className="text-neutral-300 leading-relaxed">
-                            Developed as a prototype for RTSA, this project demonstrates how <span className="text-white font-semibold">embedded
+                        <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                            Developed as a prototype for RTSA, this project demonstrates how <span className="text-[var(--color-text-primary)] font-semibold">embedded
                                 systems and IoT technology</span> can be leveraged to save lives and improve transportation safety
                             in developing countries.
                         </p>
@@ -131,12 +131,12 @@ export default function SmartCarSafetyPage() {
                     </h2>
                     <BentoCard className="bg-gradient-to-br from-violet-500/10 to-red-500/10 border-violet-500/20 p-8">
                         <div className="space-y-4">
-                            <p className="text-neutral-300 leading-relaxed">
+                            <p className="text-[var(--color-text-secondary)] leading-relaxed">
                                 Public transport accidents in Zambia often result in severe casualties due to delayed emergency
                                 response, lack of driver accountability, and insufficient safety monitoring. Traditional methods
                                 of tracking driver behavior and vehicle compliance are manual, inefficient, and prone to errors.
                             </p>
-                            <p className="text-white font-semibold">
+                            <p className="text-[var(--color-text-primary)] font-semibold">
                                 Smart Car Safety addresses this by providing automated accident detection, real-time speed monitoring,
                                 driver verification, and instant emergency alerts — all integrated into a single, cost-effective IoT system.
                             </p>
@@ -159,12 +159,12 @@ export default function SmartCarSafetyPage() {
                             >
                                 <BentoCard className="h-full p-5">
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 rounded-lg bg-white/5 text-violet-500 flex-shrink-0">
+                                        <div className="p-2 rounded-lg bg-[var(--color-surface)] text-violet-500 flex-shrink-0">
                                             <feature.icon className="w-5 h-5" />
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-white text-sm mb-1">{feature.title}</h3>
-                                            <p className="text-xs text-neutral-400">{feature.desc}</p>
+                                            <p className="text-xs text-[var(--color-text-secondary)]">{feature.desc}</p>
                                         </div>
                                     </div>
                                 </BentoCard>
@@ -186,7 +186,7 @@ export default function SmartCarSafetyPage() {
                                     {category.items.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-300 bg-white/5"
+                                            className="text-xs border border-[var(--color-border)] px-2 py-1 rounded text-[var(--color-text-secondary)] bg-[var(--color-surface)]"
                                         >
                                             {tech}
                                         </span>
@@ -206,28 +206,28 @@ export default function SmartCarSafetyPage() {
                         <div className="space-y-6">
                             <div>
                                 <h3 className="font-bold text-white mb-2">Sensor Layer</h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Multi-axis accelerometers, gyroscopes, and GPS modules continuously monitor vehicle dynamics,
                                     detecting sudden impacts, harsh braking, and location changes.
                                 </p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2">Processing Layer</h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Embedded C++ algorithms analyze sensor data in real-time, identifying accident patterns and
                                     triggering alerts based on configurable thresholds and machine learning models.
                                 </p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2">Communication Layer</h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Cellular modules transmit critical data to cloud servers and emergency services, with local
                                     storage for offline operation and data redundancy.
                                 </p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2">Integration Layer</h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     APIs connect to RTSA databases for driver verification, fleet management systems for monitoring,
                                     and emergency services for rapid response coordination.
                                 </p>
@@ -246,7 +246,7 @@ export default function SmartCarSafetyPage() {
                             {contributions.map((contribution, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-violet-500 flex-shrink-0 mt-0.5" />
-                                    <p className="text-sm text-neutral-300">{contribution}</p>
+                                    <p className="text-sm text-[var(--color-text-secondary)]">{contribution}</p>
                                 </div>
                             ))}
                         </div>
@@ -263,7 +263,7 @@ export default function SmartCarSafetyPage() {
                             <BentoCard key={index} className="p-6">
                                 <innovation.icon className="w-6 h-6 text-violet-500 mb-3" />
                                 <h3 className="font-bold text-white mb-2">{innovation.title}</h3>
-                                <p className="text-sm text-neutral-400">{innovation.desc}</p>
+                                <p className="text-sm text-[var(--color-text-secondary)]">{innovation.desc}</p>
                             </BentoCard>
                         ))}
                     </div>
@@ -278,17 +278,17 @@ export default function SmartCarSafetyPage() {
                         <BentoCard className="text-center p-6">
                             <AlertTriangle className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
                             <div className="text-2xl font-bold text-white mb-2">Faster Response</div>
-                            <p className="text-sm text-neutral-400">Automatic emergency alerts reduce response time</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Automatic emergency alerts reduce response time</p>
                         </BentoCard>
                         <BentoCard className="text-center p-6">
                             <Shield className="w-8 h-8 text-green-500 mx-auto mb-3" />
                             <div className="text-2xl font-bold text-white mb-2">Safer Driving</div>
-                            <p className="text-sm text-neutral-400">Real-time monitoring improves driver behavior</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Real-time monitoring improves driver behavior</p>
                         </BentoCard>
                         <BentoCard className="text-center p-6">
                             <Database className="w-8 h-8 text-blue-500 mx-auto mb-3" />
                             <div className="text-2xl font-bold text-white mb-2">Data-Driven</div>
-                            <p className="text-sm text-neutral-400">Analytics enable better safety policies</p>
+                            <p className="text-sm text-[var(--color-text-secondary)]">Analytics enable better safety policies</p>
                         </BentoCard>
                     </div>
                 </section>
@@ -305,7 +305,7 @@ export default function SmartCarSafetyPage() {
                                     <Car className="w-5 h-5 text-violet-500" />
                                     Fleet-Wide Deployment
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Scale from prototype to production deployment across public transport fleets
                                 </p>
                             </div>
@@ -314,7 +314,7 @@ export default function SmartCarSafetyPage() {
                                     <Bot className="w-5 h-5 text-violet-500" />
                                     Predictive Analytics
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Machine learning models to predict high-risk situations before they occur
                                 </p>
                             </div>
@@ -323,7 +323,7 @@ export default function SmartCarSafetyPage() {
                                     <Smartphone className="w-5 h-5 text-violet-500" />
                                     Driver Mobile App
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Real-time feedback and coaching for drivers to improve safety scores
                                 </p>
                             </div>
@@ -332,7 +332,7 @@ export default function SmartCarSafetyPage() {
                                     <Link2 className="w-5 h-5 text-violet-500" />
                                     National Integration
                                 </h3>
-                                <p className="text-sm text-neutral-400">
+                                <p className="text-sm text-[var(--color-text-secondary)]">
                                     Connect with national traffic management and emergency response systems
                                 </p>
                             </div>
