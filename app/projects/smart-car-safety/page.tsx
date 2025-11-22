@@ -129,7 +129,7 @@ export default function SmartCarSafetyPage() {
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <span className="text-violet-500">02.</span> The Problem
                     </h2>
-                    <BentoCard className="bg-gradient-to-br from-violet-500/10 to-red-500/10 border-violet-500/20">
+                    <BentoCard className="bg-gradient-to-br from-violet-500/10 to-red-500/10 border-violet-500/20 p-8">
                         <div className="space-y-4">
                             <p className="text-neutral-300 leading-relaxed">
                                 Public transport accidents in Zambia often result in severe casualties due to delayed emergency
@@ -157,7 +157,7 @@ export default function SmartCarSafetyPage() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.05, duration: 0.3 }}
                             >
-                                <BentoCard className="h-full">
+                                <BentoCard className="h-full p-5">
                                     <div className="flex items-start gap-3">
                                         <div className="p-2 rounded-lg bg-white/5 text-violet-500 flex-shrink-0">
                                             <feature.icon className="w-5 h-5" />
@@ -180,7 +180,7 @@ export default function SmartCarSafetyPage() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {techStack.map((category, index) => (
-                            <BentoCard key={index}>
+                            <BentoCard key={index} className="p-6">
                                 <h3 className="font-mono text-xs text-violet-500 mb-3 uppercase">{category.category}</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {category.items.map((tech) => (
@@ -202,7 +202,7 @@ export default function SmartCarSafetyPage() {
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <span className="text-violet-500">05.</span> System Architecture
                     </h2>
-                    <BentoCard>
+                    <BentoCard className="p-8">
                         <div className="space-y-6">
                             <div>
                                 <h3 className="font-bold text-white mb-2">Sensor Layer</h3>
@@ -241,7 +241,7 @@ export default function SmartCarSafetyPage() {
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <span className="text-violet-500">06.</span> My Role & Contributions
                     </h2>
-                    <BentoCard>
+                    <BentoCard className="p-8">
                         <div className="space-y-3">
                             {contributions.map((contribution, index) => (
                                 <div key={index} className="flex items-start gap-3">
@@ -260,7 +260,7 @@ export default function SmartCarSafetyPage() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {innovations.map((innovation, index) => (
-                            <BentoCard key={index}>
+                            <BentoCard key={index} className="p-6">
                                 <innovation.icon className="w-6 h-6 text-violet-500 mb-3" />
                                 <h3 className="font-bold text-white mb-2">{innovation.title}</h3>
                                 <p className="text-sm text-neutral-400">{innovation.desc}</p>
@@ -275,17 +275,17 @@ export default function SmartCarSafetyPage() {
                         <span className="text-violet-500">08.</span> Potential Impact
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <BentoCard className="text-center">
+                        <BentoCard className="text-center p-6">
                             <AlertTriangle className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
                             <div className="text-2xl font-bold text-white mb-2">Faster Response</div>
                             <p className="text-sm text-neutral-400">Automatic emergency alerts reduce response time</p>
                         </BentoCard>
-                        <BentoCard className="text-center">
+                        <BentoCard className="text-center p-6">
                             <Shield className="w-8 h-8 text-green-500 mx-auto mb-3" />
                             <div className="text-2xl font-bold text-white mb-2">Safer Driving</div>
                             <p className="text-sm text-neutral-400">Real-time monitoring improves driver behavior</p>
                         </BentoCard>
-                        <BentoCard className="text-center">
+                        <BentoCard className="text-center p-6">
                             <Database className="w-8 h-8 text-blue-500 mx-auto mb-3" />
                             <div className="text-2xl font-bold text-white mb-2">Data-Driven</div>
                             <p className="text-sm text-neutral-400">Analytics enable better safety policies</p>
@@ -298,7 +298,7 @@ export default function SmartCarSafetyPage() {
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <span className="text-violet-500">09.</span> Future Roadmap
                     </h2>
-                    <BentoCard className="bg-gradient-to-br from-violet-500/10 to-blue-500/10 border-violet-500/20">
+                    <BentoCard className="bg-gradient-to-br from-violet-500/10 to-blue-500/10 border-violet-500/20 p-8">
                         <div className="space-y-4">
                             <div>
                                 <h3 className="font-bold text-white mb-2 flex items-center gap-2">

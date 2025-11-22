@@ -96,7 +96,7 @@ export default function AuroraProject() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.05, duration: 0.3 }}
                             >
-                                <BentoCard className="h-full">
+                                <BentoCard className="h-full p-5">
                                     <div className="flex items-start gap-3">
                                         <div className="p-2 rounded-lg bg-[var(--color-surface)] text-[var(--color-accent-primary)] flex-shrink-0">
                                             <feature.icon className="w-5 h-5" />
@@ -119,7 +119,7 @@ export default function AuroraProject() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {techStack.map((category, index) => (
-                            <BentoCard key={index}>
+                            <BentoCard key={index} className="p-6">
                                 <h3 className="font-mono text-xs text-[var(--color-accent-primary)] mb-3 uppercase">{category.category}</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {category.items.map((tech) => (
@@ -141,7 +141,7 @@ export default function AuroraProject() {
                     <h2 className="text-2xl font-bold tracking-tight mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-[var(--color-accent-primary)]">04.</span> Engineering Excellence
                     </h2>
-                    <BentoCard>
+                    <BentoCard className="p-8">
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -189,8 +189,8 @@ export default function AuroraProject() {
 
                 {/* Impact Statement */}
                 <section>
-                    <BentoCard className="bg-gradient-to-br from-[var(--color-accent-primary)]/10 to-[var(--color-accent-secondary)]/10 border-[var(--color-accent-primary)]/20">
-                        <div className="text-center py-8">
+                    <BentoCard className="bg-gradient-to-br from-[var(--color-accent-primary)]/10 to-[var(--color-accent-secondary)]/10 border-[var(--color-accent-primary)]/20 p-8">
+                        <div className="text-center py-4">
                             <h2 className="text-2xl font-bold tracking-tight mb-4 text-[var(--color-text-primary)]">A Fully Engineered Trading Ecosystem</h2>
                             <p className="text-[var(--color-text-secondary)] max-w-3xl mx-auto leading-relaxed">
                                 Aurora demonstrates <span className="text-[var(--color-text-primary)] font-semibold">engineering maturity</span>,

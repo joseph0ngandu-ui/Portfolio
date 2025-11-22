@@ -129,7 +129,7 @@ export default function ZEDUPage() {
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <span className="text-orange-500">02.</span> The Problem
                     </h2>
-                    <BentoCard className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border-orange-500/20">
+                    <BentoCard className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border-orange-500/20 p-8">
                         <div className="space-y-4">
                             <p className="text-neutral-300 leading-relaxed">
                                 Zambian schools struggle with manual processes for attendance, grading, and student tracking.
@@ -158,7 +158,7 @@ export default function ZEDUPage() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.05, duration: 0.3 }}
                             >
-                                <BentoCard className="h-full">
+                                <BentoCard className="h-full p-5">
                                     <div className="flex items-start gap-3">
                                         <div className="p-2 rounded-lg bg-white/5 text-orange-500 flex-shrink-0">
                                             <feature.icon className="w-5 h-5" />
@@ -181,7 +181,7 @@ export default function ZEDUPage() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {techStack.map((category, index) => (
-                            <BentoCard key={index}>
+                            <BentoCard key={index} className="p-6">
                                 <h3 className="font-mono text-xs text-orange-500 mb-3 uppercase">{category.category}</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {category.items.map((tech) => (
@@ -203,7 +203,7 @@ export default function ZEDUPage() {
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <span className="text-orange-500">05.</span> My Role & Contributions
                     </h2>
-                    <BentoCard>
+                    <BentoCard className="p-8">
                         <p className="text-neutral-400 mb-6 text-sm">
                             As the lead engineer and architect, I'm responsible for every aspect of ZEDU's development:
                         </p>
@@ -225,7 +225,7 @@ export default function ZEDUPage() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {innovations.map((innovation, index) => (
-                            <BentoCard key={index}>
+                            <BentoCard key={index} className="p-6">
                                 <innovation.icon className="w-6 h-6 text-orange-500 mb-3" />
                                 <h3 className="font-bold text-white mb-2">{innovation.title}</h3>
                                 <p className="text-sm text-neutral-400">{innovation.desc}</p>
@@ -240,15 +240,15 @@ export default function ZEDUPage() {
                         <span className="text-orange-500">07.</span> Key Wins
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <BentoCard className="text-center">
+                        <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-orange-500 mb-2">100%</div>
                             <p className="text-sm text-neutral-400">Designed & Built by Me</p>
                         </BentoCard>
-                        <BentoCard className="text-center">
+                        <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-orange-500 mb-2">Scalable</div>
                             <p className="text-sm text-neutral-400">Grows with Each Institution</p>
                         </BentoCard>
-                        <BentoCard className="text-center">
+                        <BentoCard className="text-center p-6">
                             <div className="text-3xl font-bold text-orange-500 mb-2">AI-First</div>
                             <p className="text-sm text-neutral-400">Smart Automation Built-In</p>
                         </BentoCard>
@@ -260,7 +260,7 @@ export default function ZEDUPage() {
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <span className="text-orange-500">08.</span> Future Roadmap
                     </h2>
-                    <BentoCard className="bg-gradient-to-br from-orange-500/10 to-violet-500/10 border-orange-500/20">
+                    <BentoCard className="bg-gradient-to-br from-orange-500/10 to-violet-500/10 border-orange-500/20 p-8">
                         <div className="space-y-4">
                             <div>
                                 <h3 className="font-bold text-white mb-2 flex items-center gap-2">
