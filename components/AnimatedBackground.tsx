@@ -103,26 +103,26 @@ export default function AnimatedBackground() {
             color: string;
             glow: number;
 
-            constructor() {
+            constructor(canvasWidth: number, canvasHeight: number) {
                 // Start from random edge
                 const startSide = Math.floor(Math.random() * 4);
                 if (startSide === 0) { // Top
-                    this.x = Math.random() * canvas.width;
+                    this.x = Math.random() * canvasWidth;
                     this.y = 0;
                 } else if (startSide === 1) { // Right
-                    this.x = canvas.width;
-                    this.y = Math.random() * canvas.height;
+                    this.x = canvasWidth;
+                    this.y = Math.random() * canvasHeight;
                 } else if (startSide === 2) { // Bottom
-                    this.x = Math.random() * canvas.width;
-                    this.y = canvas.height;
+                    this.x = Math.random() * canvasWidth;
+                    this.y = canvasHeight;
                 } else { // Left
                     this.x = 0;
-                    this.y = Math.random() * canvas.height;
+                    this.y = Math.random() * canvasHeight;
                 }
 
                 // Random target on opposite side
-                this.targetX = Math.random() * canvas.width;
-                this.targetY = Math.random() * canvas.height;
+                this.targetX = Math.random() * canvasWidth;
+                this.targetY = Math.random() * canvasHeight;
 
                 this.progress = 0;
                 this.width = Math.random() * 1.5 + 0.5; // Reduced from 2+1 to 1.5+0.5
@@ -260,7 +260,7 @@ export default function AnimatedBackground() {
             pulseSpawnTimer++;
             if (pulseSpawnTimer > 120) { // Increased from 60 to 120
                 pulseSpawnTimer = 0;
-                pulses.push(new Pulse());
+                pulses.push(new Pulse(canvas.width, canvas.height));
             }
 
             // Update and draw pulses
