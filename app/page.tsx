@@ -108,7 +108,7 @@ export default function Home() {
             © {new Date().getFullYear()} Joseph Ngandu. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="https://github.com/joseph0ngandu" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
+            <a href="https://github.com/joseph0ngandu-ui" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
               GITHUB
             </a>
             <a href="https://linkedin.com/in/josephngandu" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">

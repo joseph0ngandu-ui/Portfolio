@@ -45,8 +45,8 @@ export default function About() {
                         <div className="relative">
                             <BentoCard className="aspect-square flex items-center justify-center p-8">
                                 <div className="text-center">
-                                    <div className="text-6xl font-bold text-[var(--color-accent-primary)] mb-2">4+</div>
-                                    <div className="text-sm font-mono text-[var(--color-text-secondary)] uppercase tracking-widest">Years Experience</div>
+                                    <div className="text-6xl font-bold text-[var(--color-accent-primary)] mb-2">5+</div>
+                                    <div className="text-sm font-mono text-[var(--color-text-secondary)] uppercase tracking-widest">Projects Shipped</div>
                                 </div>
                             </BentoCard>
                         </div>
@@ -68,16 +68,15 @@ export default function About() {
                         <BentoCard className="p-8">
                             <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
                                 <div>
-                                    <h3 className="text-xl font-bold tracking-tight text-[var(--color-text-primary)]">Bachelor of Science in Computer Science</h3>
-                                    <p className="text-[var(--color-accent-primary)]">Mulungushi University</p>
+                                    <h3 className="text-xl font-bold tracking-tight text-[var(--color-text-primary)]">Bachelor of Science in Information Technology</h3>
+                                    <p className="text-[var(--color-accent-primary)]">ZCAS University</p>
                                 </div>
                                 <div className="text-sm font-mono text-[var(--color-text-secondary)] bg-[var(--color-background)] px-3 py-1 rounded border border-[var(--color-border)] w-fit">
-                                    2020 - 2024
+                                    2024 - 2028 (Expected)
                                 </div>
                             </div>
                             <p className="text-[var(--color-text-secondary)]">
-                                Focused on Algorithms, Data Structures, and Software Engineering principles.
-                                Graduated with distinction.
+                                Currently in 3rd year, focused on Software Engineering, System Architecture, and Cloud Computing.
                             </p>
                         </BentoCard>
                     </div>

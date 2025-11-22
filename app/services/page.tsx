@@ -184,12 +184,12 @@ export default function ServicesPage() {
                     <h2 className="text-2xl font-bold tracking-tight mb-8 flex items-center gap-2 text-[var(--color-text-primary)]">
                         <span className="text-[var(--color-accent-primary)]">02.</span> How I Work
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {process.map((item, index) => (
-                            <BentoCard key={index}>
-                                <div className="text-4xl font-bold text-[var(--color-accent-primary)]/20 mb-4">{item.step}</div>
-                                <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-2">{item.title}</h3>
-                                <p className="text-sm text-[var(--color-text-secondary)]">{item.description}</p>
+                            <BentoCard key={index} className="p-8">
+                                <div className="text-5xl font-bold text-[var(--color-accent-primary)]/20 mb-6">{item.step}</div>
+                                <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-3">{item.title}</h3>
+                                <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">{item.description}</p>
                             </BentoCard>
                         ))}
                     </div>
@@ -201,26 +201,26 @@ export default function ServicesPage() {
                         <span className="text-[var(--color-accent-primary)]">03.</span> Why Work With Me
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <BentoCard>
-                            <Zap className="w-8 h-8 text-[var(--color-accent-primary)] mb-4" />
-                            <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-2">Fast Execution</h3>
-                            <p className="text-sm text-[var(--color-text-secondary)]">
+                        <BentoCard className="p-8">
+                            <Zap className="w-10 h-10 text-[var(--color-accent-primary)] mb-6" />
+                            <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-3">Fast Execution</h3>
+                            <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
                                 I ship production-grade code quickly without sacrificing quality.
                                 No endless meetings, just results.
                             </p>
                         </BentoCard>
-                        <BentoCard>
-                            <Shield className="w-8 h-8 text-[var(--color-accent-secondary)] mb-4" />
-                            <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-2">Production-Ready</h3>
-                            <p className="text-sm text-[var(--color-text-secondary)]">
+                        <BentoCard className="p-8">
+                            <Shield className="w-10 h-10 text-[var(--color-accent-secondary)] mb-6" />
+                            <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-3">Production-Ready</h3>
+                            <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
                                 Everything I build is designed to scale, self-heal, and run with
                                 minimal intervention from day one.
                             </p>
                         </BentoCard>
-                        <BentoCard>
-                            <Cpu className="w-8 h-8 text-[var(--color-accent-primary)] mb-4" />
-                            <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-2">Full-Stack Expertise</h3>
-                            <p className="text-sm text-[var(--color-text-secondary)]">
+                        <BentoCard className="p-8">
+                            <Cpu className="w-10 h-10 text-[var(--color-accent-primary)] mb-6" />
+                            <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-3">Full-Stack Expertise</h3>
+                            <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
                                 From embedded systems to cloud infrastructure, I handle the entire
                                 stack so you don't need multiple specialists.
                             </p>

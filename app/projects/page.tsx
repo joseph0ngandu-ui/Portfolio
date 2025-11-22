@@ -86,28 +86,28 @@ export default function Projects() {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
                             <Link href={project.link} className="block h-full">
-                                <BentoCard className="h-full group cursor-pointer hover:border-[var(--color-accent-primary)]/50">
+                                <BentoCard className="h-full group cursor-pointer hover:border-[var(--color-accent-primary)]/50 p-8">
                                     <div className="flex flex-col h-full">
-                                        <div className="flex items-center justify-between mb-6">
-                                            <div className="p-3 rounded-lg bg-[var(--color-background)] text-[var(--color-accent-primary)]">
-                                                <project.icon className="w-6 h-6" />
+                                        <div className="flex items-center justify-between mb-8">
+                                            <div className="p-4 rounded-xl bg-[var(--color-background)] text-[var(--color-accent-primary)]">
+                                                <project.icon className="w-8 h-8" />
                                             </div>
                                             <div className="flex items-center gap-2">
-                                                <span className={`w-2 h-2 rounded-full ${project.status === "LIVE" ? "bg-green-500 animate-pulse" : project.status === "PROTOTYPE" ? "bg-yellow-500" : project.status === "PRODUCTION" ? "bg-blue-500" : "bg-orange-500"}`} />
+                                                <span className={`w-2.5 h-2.5 rounded-full ${project.status === "LIVE" ? "bg-green-500 animate-pulse" : project.status === "PROTOTYPE" ? "bg-yellow-500" : project.status === "PRODUCTION" ? "bg-blue-500" : "bg-orange-500"}`} />
                                                 <span className="text-xs font-mono text-[var(--color-text-secondary)] uppercase">{project.status}</span>
                                             </div>
                                         </div>
 
-                                        <h3 className="text-2xl font-bold tracking-tight text-[var(--color-text-primary)] mb-3 group-hover:text-[var(--color-accent-primary)] transition-colors">
+                                        <h3 className="text-2xl font-bold tracking-tight text-[var(--color-text-primary)] mb-4 group-hover:text-[var(--color-accent-primary)] transition-colors">
                                             {project.title}
                                         </h3>
-                                        <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
+                                        <p className="text-base text-[var(--color-text-secondary)] mb-6 flex-grow leading-relaxed">
                                             {project.description}
                                         </p>
 
                                         <div className="flex flex-wrap gap-2 mt-auto">
                                             {project.stack.map((tech, i) => (
-                                                <span key={i} className="px-2 py-1 text-xs font-mono rounded bg-[var(--color-background)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
+                                                <span key={i} className="px-3 py-1.5 text-xs font-mono rounded bg-[var(--color-background)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
                                                     {tech}
                                                 </span>
                                             ))}
