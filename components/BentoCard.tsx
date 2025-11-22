@@ -13,7 +13,7 @@ interface BentoCardProps {
 export default function BentoCard({
     children,
     className,
-    spotlightColor = "rgba(59, 130, 246, 0.15)", // Electric Blue default
+    spotlightColor = "rgba(184, 134, 11, 0.15)", // Dark Goldenrod default
 }: BentoCardProps) {
     const divRef = useRef<HTMLDivElement>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -41,7 +41,7 @@ export default function BentoCard({
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             className={clsx(
-                "relative overflow-hidden rounded-xl border border-white/10 bg-[#0a0a0a] p-6 transition-colors hover:border-white/20",
+                "relative rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-[var(--color-accent-primary)]/50 group",
                 className
             )}
         >

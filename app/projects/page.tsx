@@ -71,96 +71,50 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h1 className="text-4xl md:text-5xl font-bold mb-2">PROJECT_INDEX</h1>
-                <p className="text-neutral-400 font-mono text-sm mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 text-[var(--color-text-primary)]">PROJECT_INDEX</h1>
+                <p className="text-[var(--color-text-secondary)] font-mono text-sm mb-12">
                     &gt; ACCESSING ARCHIVES... FOUND {projects.length} ENTRIES
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
-                            {project.link ? (
-                                <Link href={project.link} className="block h-full">
-                                    <BentoCard className="h-full min-h-[320px] group cursor-pointer">
-                                        <div className="flex flex-col h-full">
-                                            <div className="flex justify-between items-start mb-6">
-                                                <div className={`p-3 rounded-lg bg-white/5 ${project.color}`}>
-                                                    <project.icon className="w-6 h-6" />
-                                                </div>
-                                                <ArrowUpRight className="w-5 h-5 text-neutral-600 group-hover:text-white transition-colors" />
-                                            </div>
-
-                                            <div className="mb-auto">
-                                                <span className="text-xs font-mono text-neutral-500 mb-2 block">
-                                                    {project.category}
-                                                </span>
-                                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                                                    {project.title}
-                                                </h3>
-                                                <p className="text-sm text-neutral-400 leading-relaxed mb-4">
-                                                    {project.description}
-                                                </p>
-                                            </div>
-
-                                            <div className="mt-4 pt-4 border-t border-white/5">
-                                                <div className="flex flex-wrap gap-2 mb-4">
-                                                    {project.stack.map((tech) => (
-                                                        <span key={tech} className="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-neutral-300">
-                                                            {tech}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                                <div className="flex items-center gap-2 text-xs font-mono text-neutral-500">
-                                                    <span className={`w-1.5 h-1.5 rounded-full ${project.statusColor}`} />
-                                                    {project.status}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </BentoCard>
-                                </Link>
-                            ) : (
-                                <BentoCard className="h-full min-h-[320px] group">
+                            <Link href={project.link} className="block h-full">
+                                <BentoCard className="h-full group cursor-pointer hover:border-[var(--color-accent-primary)]/50">
                                     <div className="flex flex-col h-full">
-                                        <div className="flex justify-between items-start mb-6">
-                                            <div className={`p-3 rounded-lg bg-white/5 ${project.color}`}>
+                                        <div className="flex items-center justify-between mb-6">
+                                            <div className="p-3 rounded-lg bg-[var(--color-background)] text-[var(--color-accent-primary)]">
                                                 <project.icon className="w-6 h-6" />
                                             </div>
-                                            <ArrowUpRight className="w-5 h-5 text-neutral-600 group-hover:text-white transition-colors" />
+                                            <div className="flex items-center gap-2">
+                                                <span className={`w-2 h-2 rounded-full ${project.status === "LIVE" ? "bg-green-500 animate-pulse" : project.status === "PROTOTYPE" ? "bg-yellow-500" : project.status === "PRODUCTION" ? "bg-blue-500" : "bg-orange-500"}`} />
+                                                <span className="text-xs font-mono text-[var(--color-text-secondary)] uppercase">{project.status}</span>
+                                            </div>
                                         </div>
 
-                                        <div className="mb-auto">
-                                            <span className="text-xs font-mono text-neutral-500 mb-2 block">
-                                                {project.category}
-                                            </span>
-                                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                                                {project.title}
-                                            </h3>
-                                            <p className="text-sm text-neutral-400 leading-relaxed mb-4">
-                                                {project.description}
-                                            </p>
-                                        </div>
+                                        <h3 className="text-2xl font-bold tracking-tight text-[var(--color-text-primary)] mb-3 group-hover:text-[var(--color-accent-primary)] transition-colors">
+                                            {project.title}
+                                        </h3>
+                                        <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
+                                            {project.description}
+                                        </p>
 
-                                        <div className="mt-4 pt-4 border-t border-white/5">
-                                            <div className="flex flex-wrap gap-2 mb-4">
-                                                {project.stack.map((tech) => (
-                                                    <span key={tech} className="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-neutral-300">
-                                                        {tech}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                            <div className="flex items-center gap-2 text-xs font-mono text-neutral-500">
-                                                <span className={`w-1.5 h-1.5 rounded-full ${project.statusColor}`} />
-                                                {project.status}
-                                            </div>
+                                        <div className="flex flex-wrap gap-2 mt-auto">
+                                            {project.stack.map((tech, i) => (
+                                                <span key={i} className="px-2 py-1 text-xs font-mono rounded bg-[var(--color-background)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
+                                                    {tech}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
                                 </BentoCard>
-                            )}
+                            </Link>
                         </motion.div>
                     ))}
                 </div>

@@ -47,8 +47,6 @@ export const metadata: Metadata = {
   },
 };
 
-import DynamicVideoBackground from "@/components/DynamicVideoBackground";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,9 +55,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable} ${inter.variable} antialiased bg-[#050505] text-[#e5e5e5] selection:bg-[#3b82f6] selection:text-white`}
+        className={`${jetbrainsMono.variable} ${inter.variable} antialiased selection:bg-[#C3B091] selection:text-white`}
       >
-        <DynamicVideoBackground />
         <Navbar />
         <main className="min-h-screen flex flex-col">
           {children}

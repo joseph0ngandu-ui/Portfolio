@@ -2,116 +2,138 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Terminal, BookOpen, Code, Server, Globe } from "lucide-react";
+import { Terminal, BookOpen, Code, Server, Globe, Cpu, Database } from "lucide-react";
+import BentoCard from "@/components/BentoCard";
 
 export default function About() {
     return (
-        <div className="pt-24 md:pt-32 pb-20 px-4 md:px-8 max-w-4xl mx-auto w-full">
+        <div className="min-h-screen pt-24 md:pt-32 pb-20 px-4 md:px-8 max-w-5xl mx-auto w-full">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.8 }}
             >
-                <h1 className="text-4xl md:text-5xl font-bold mb-8">USER_PROFILE</h1>
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-8 text-[var(--color-text-primary)]">
+                    ABOUT_ME
+                </h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12">
-                    {/* Main Content */}
-                    <div className="space-y-12">
-                        <section>
-                            <h2 className="text-xl font-mono text-blue-500 mb-4 flex items-center gap-2">
-                                <Terminal className="w-5 h-5" />
-                                WHO_AM_I
+                {/* Story Section */}
+                <motion.section
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.8 }}
+                    className="mb-20"
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-2xl font-bold tracking-tight mb-6 text-[var(--color-text-primary)] flex items-center gap-2">
+                                <span className="text-[var(--color-accent-primary)]">01.</span> WHO_AM_I
                             </h2>
-                            <div className="prose prose-invert prose-lg text-neutral-300">
-                                <p className="leading-relaxed">
-                                    I am a DevOps-driven IT engineer and a third-year student at ZCAS University.
-                                    My expertise lies in optimizing systems end-to-end. I don't just write code;
-                                    I build engines that run businesses.
+                            <div className="space-y-4 text-[var(--color-text-secondary)] leading-relaxed">
+                                <p>
+                                    I'm a developer who thinks in systems. I don't just write code; I build engines that drive business logic forward.
                                 </p>
-                                <p className="leading-relaxed mt-4">
-                                    <span className="text-white font-semibold">"I remove bottlenecks."</span>
-                                    I automate everything that slows down delivery, scale everything that works,
-                                    and keep shipping. My goal is simple: join high-performance teams and solve
-                                    complex infrastructure challenges.
+                                <p>
+                                    My background spans from high-frequency trading systems to scalable web applications. I've learned that the best code is the code that doesn't need to be written twice.
                                 </p>
-                            </div>
-                        </section>
-
-                        <section>
-                            <h2 className="text-xl font-mono text-violet-500 mb-4 flex items-center gap-2">
-                                <BookOpen className="w-5 h-5" />
-                                EDUCATION
-                            </h2>
-                            <div className="border-l-2 border-white/10 pl-6 py-2">
-                                <h3 className="text-lg font-bold text-white">Bachelor of Science in IT</h3>
-                                <p className="text-neutral-400">ZCAS University</p>
-                                <p className="text-sm font-mono text-neutral-500 mt-1">2024 - PRESENT (YEAR 3)</p>
-                            </div>
-                        </section>
-
-                        <section>
-                            <Link href="/about/story" className="block group">
-                                <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/20 p-8 rounded-lg hover:border-green-500/40 transition-all cursor-pointer">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <h2 className="text-xl font-mono text-green-500 flex items-center gap-2">
-                                            <Terminal className="w-5 h-5" />
-                                            READ_MY_STORY
-                                        </h2>
-                                        <span className="text-neutral-500 group-hover:text-white transition-colors">→</span>
-                                    </div>
-                                    <p className="text-neutral-300 leading-relaxed">
-                                        Dive deeper into my journey, what drives me, my engineering philosophy,
-                                        and what I'm looking for in my next opportunity.
-                                    </p>
-                                </div>
-                            </Link>
-                        </section>
-                    </div>
-
-                    {/* Sidebar Stats */}
-                    <div className="space-y-8">
-                        <div className="p-6 border border-white/10 rounded-xl bg-[#0a0a0a]">
-                            <h3 className="font-mono text-xs text-neutral-500 mb-4 uppercase">Tech Stack</h3>
-
-                            <div className="space-y-6">
-                                <div>
-                                    <div className="flex items-center gap-2 mb-2 text-white text-sm font-bold">
-                                        <Server className="w-4 h-4 text-blue-500" />
-                                        OPS & INFRA
-                                    </div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["Linux", "AWS", "Docker", "CI/CD", "Nginx"].map(t => (
-                                            <span key={t} className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-400">{t}</span>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div className="flex items-center gap-2 mb-2 text-white text-sm font-bold">
-                                        <Code className="w-4 h-4 text-violet-500" />
-                                        DEVELOPMENT
-                                    </div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["Python", "Swift", "MQL5", "SQL", "FastAPI"].map(t => (
-                                            <span key={t} className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-400">{t}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex items-center gap-2 mb-2 text-white text-sm font-bold">
-                                        <Globe className="w-4 h-4 text-green-500" />
-                                        WEB DEVELOPMENT
-                                    </div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {["HTML", "JavaScript", "Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"].map(t => (
-                                            <span key={t} className="text-xs border border-white/10 px-2 py-1 rounded text-neutral-400">{t}</span>
-                                        ))}
-                                    </div>
-                                </div>
+                                <p>
+                                    When I'm not optimizing algorithms or designing database schemas, I'm likely exploring the latest in AI agents or fine-tuning my local LLM setup.
+                                </p>
                             </div>
                         </div>
+                        <div className="relative">
+                            <BentoCard className="aspect-square flex items-center justify-center p-8">
+                                <div className="text-center">
+                                    <div className="text-6xl font-bold text-[var(--color-accent-primary)] mb-2">4+</div>
+                                    <div className="text-sm font-mono text-[var(--color-text-secondary)] uppercase tracking-widest">Years Experience</div>
+                                </div>
+                            </BentoCard>
+                        </div>
                     </div>
-                </div>
+                </motion.section>
+
+                {/* Education & Experience */}
+                <motion.section
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.8 }}
+                    className="mb-20"
+                >
+                    <h2 className="text-2xl font-bold tracking-tight mb-8 text-[var(--color-text-primary)] flex items-center gap-2">
+                        <span className="text-[var(--color-accent-primary)]">02.</span> EDUCATION
+                    </h2>
+                    <div className="space-y-6">
+                        <BentoCard className="p-8">
+                            <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                                <div>
+                                    <h3 className="text-xl font-bold tracking-tight text-[var(--color-text-primary)]">Bachelor of Science in Computer Science</h3>
+                                    <p className="text-[var(--color-accent-primary)]">Mulungushi University</p>
+                                </div>
+                                <div className="text-sm font-mono text-[var(--color-text-secondary)] bg-[var(--color-background)] px-3 py-1 rounded border border-[var(--color-border)] w-fit">
+                                    2020 - 2024
+                                </div>
+                            </div>
+                            <p className="text-[var(--color-text-secondary)]">
+                                Focused on Algorithms, Data Structures, and Software Engineering principles.
+                                Graduated with distinction.
+                            </p>
+                        </BentoCard>
+                    </div>
+                </motion.section>
+
+                {/* Tech Stack */}
+                <motion.section
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h2 className="text-2xl font-bold tracking-tight mb-8 text-[var(--color-text-primary)] flex items-center gap-2">
+                        <span className="text-[var(--color-accent-primary)]">03.</span> TECH_STACK
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <BentoCard className="p-6">
+                            <h3 className="font-bold tracking-tight text-[var(--color-text-primary)] mb-4 flex items-center gap-2">
+                                <Code className="w-5 h-5 text-[var(--color-accent-primary)]" /> Languages
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {["Python", "TypeScript", "JavaScript", "Swift", "SQL", "C++"].map((tech) => (
+                                    <span key={tech} className="px-2 py-1 text-xs font-mono rounded bg-[var(--color-background)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </BentoCard>
+
+                        <BentoCard className="p-6">
+                            <h3 className="font-bold tracking-tight text-[var(--color-text-primary)] mb-4 flex items-center gap-2">
+                                <Cpu className="w-5 h-5 text-[var(--color-accent-secondary)]" /> Frameworks
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {["Next.js", "React", "FastAPI", "Django", "TailwindCSS", "SwiftUI"].map((tech) => (
+                                    <span key={tech} className="px-2 py-1 text-xs font-mono rounded bg-[var(--color-background)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </BentoCard>
+
+                        <BentoCard className="p-6">
+                            <h3 className="font-bold tracking-tight text-[var(--color-text-primary)] mb-4 flex items-center gap-2">
+                                <Database className="w-5 h-5 text-[var(--color-text-primary)]" /> Tools & Cloud
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {["AWS", "Docker", "Git", "PostgreSQL", "Redis", "Linux"].map((tech) => (
+                                    <span key={tech} className="px-2 py-1 text-xs font-mono rounded bg-[var(--color-background)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </BentoCard>
+                    </div>
+                </motion.section>
             </motion.div>
         </div>
     );

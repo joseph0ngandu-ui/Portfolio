@@ -10,26 +10,27 @@ const skills = [
 
 export default function SkillTicker() {
     return (
-        <div className="relative flex overflow-hidden py-4 border-y border-white/5 bg-white/5">
-            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#050505] to-transparent z-10" />
-            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#050505] to-transparent z-10" />
+        <div className="w-full overflow-hidden bg-[var(--color-surface)] border-y border-[var(--color-border)] py-4 relative">
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[var(--color-surface)] to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[var(--color-surface)] to-transparent z-10" />
 
             <motion.div
-                className="flex gap-8 whitespace-nowrap"
-                animate={{ x: ["0%", "-50%"] }}
+                className="flex whitespace-nowrap"
+                animate={{ x: [0, -1000] }}
                 transition={{
                     repeat: Infinity,
                     ease: "linear",
                     duration: 20,
                 }}
             >
-                {[...skills, ...skills].map((skill, index) => (
-                    <span
+                {[...skills, ...skills, ...skills].map((skill, index) => (
+                    <div
                         key={index}
-                        className="text-sm font-mono text-neutral-400 uppercase tracking-wider"
+                        className="inline-flex items-center gap-2 mx-8 text-[var(--color-text-secondary)] font-mono text-sm uppercase tracking-wider"
                     >
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent-primary)]" />
                         {skill}
-                    </span>
+                    </div>
                 ))}
             </motion.div>
         </div>

@@ -45,11 +45,11 @@ export default function TerminalHero() {
     }, [currentLineIndex, currentCharIndex]);
 
     return (
-        <div className="font-mono text-sm md:text-base leading-relaxed text-neutral-400 min-h-[120px]">
+        <div className="font-mono text-sm md:text-base leading-relaxed text-[var(--color-text-secondary)] min-h-[120px]">
             {displayedLines.map((line, index) => (
                 <div key={index} className="flex items-center">
-                    <span className="mr-2 text-blue-500">$</span>
-                    <span className={index === lines.length - 1 ? "text-white" : ""}>
+                    <span className="mr-2 text-[var(--color-accent-primary)]">$</span>
+                    <span className={index === lines.length - 1 ? "text-[var(--color-text-primary)] font-bold" : ""}>
                         {line}
                     </span>
                 </div>
@@ -58,7 +58,7 @@ export default function TerminalHero() {
                 <motion.span
                     animate={{ opacity: [0, 1, 0] }}
                     transition={{ repeat: Infinity, duration: 0.8 }}
-                    className="inline-block w-2 h-4 bg-blue-500 ml-1 align-middle"
+                    className="inline-block w-2 h-4 bg-[var(--color-accent-primary)] ml-1 align-middle"
                 />
             )}
         </div>

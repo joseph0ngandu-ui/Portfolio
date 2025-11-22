@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Terminal, Cpu, Globe } from "lucide-react";
+import { Terminal, ArrowRight, Cpu, Globe, Database } from "lucide-react";
 import Link from "next/link";
 import TerminalHero from "@/components/TerminalHero";
 import BentoCard from "@/components/BentoCard";
@@ -17,25 +17,25 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.5, duration: 0.8 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
           className="mt-8"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60 break-words">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4 text-[var(--color-text-primary)] break-words">
             AUTOMATION FIRST.
             <br />
             EXCUSES LAST.
           </h1>
-          <p className="text-base md:text-xl text-neutral-400 max-w-2xl leading-relaxed font-light">
+          <p className="text-base md:text-xl text-[var(--color-text-secondary)] max-w-2xl leading-relaxed font-light">
             I remove bottlenecks. I automate everything that slows down delivery,
             scale everything that works, and keep shipping.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Link href="/projects" className="w-full sm:w-auto group relative px-6 py-3 bg-white text-black font-mono text-sm font-bold uppercase tracking-wider hover:bg-blue-500 hover:text-white transition-all duration-300 inline-flex items-center justify-center">
+            <Link href="/projects" className="w-full sm:w-auto group relative px-6 py-3 bg-[var(--color-text-primary)] text-[var(--color-background)] font-mono text-sm font-bold uppercase tracking-wider hover:bg-[var(--color-accent-primary)] transition-all duration-300 inline-flex items-center justify-center">
               View Projects
-              <span className="absolute inset-0 border border-white group-hover:border-blue-500 translate-x-1 translate-y-1 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none" />
+              <span className="absolute inset-0 border border-[var(--color-background)] group-hover:border-[var(--color-text-primary)] translate-x-1 translate-y-1 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none" />
             </Link>
-            <Link href="/contact" className="w-full sm:w-auto px-6 py-3 border border-white/20 text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-white/5 transition-colors inline-flex items-center justify-center">
+            <Link href="/contact" className="w-full sm:w-auto px-6 py-3 border border-[var(--color-border)] text-[var(--color-text-primary)] font-mono text-sm font-bold uppercase tracking-wider hover:bg-[var(--color-surface)] transition-colors inline-flex items-center justify-center">
               Contact Me
             </Link>
           </div>
@@ -44,73 +44,76 @@ export default function Home() {
 
       <SkillTicker />
 
-      {/* Selected Work Preview */}
-      <section className="px-4 md:px-8 max-w-5xl mx-auto w-full">
+      {/* Services Summary */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="px-4 md:px-8 max-w-5xl mx-auto w-full"
+      >
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-xl md:text-2xl font-mono text-white flex items-center gap-2">
-            <Terminal className="w-5 h-5 text-blue-500" />
-            SELECTED_WORK
+          <h2 className="text-xl md:text-2xl font-mono tracking-tight text-[var(--color-text-primary)] flex items-center gap-2">
+            <Terminal className="w-5 h-5 text-[var(--color-accent-primary)]" />
+            SERVICES
           </h2>
-          <Link href="/projects" className="text-xs md:text-sm text-neutral-500 hover:text-white transition-colors font-mono flex items-center gap-1">
+          <Link href="/services" className="text-xs md:text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] transition-colors font-mono flex items-center gap-1">
             VIEW_ALL <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link href="/projects/aurora" className="block h-full">
-            <BentoCard className="h-[300px] group cursor-pointer">
-              <div className="h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <Cpu className="w-8 h-8 text-blue-500" />
-                    <span className="text-xs font-mono text-neutral-500 border border-white/10 px-2 py-1 rounded">PYTHON + ML</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Aurora Trading Ecosystem</h3>
-                  <p className="text-sm text-neutral-400">
-                    High-frequency trading system featuring HTF bias detection and automated execution.
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 text-xs font-mono text-neutral-500">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  OPERATIONAL
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <BentoCard className="p-6">
+            <div className="h-full flex flex-col">
+              <div className="mb-4 p-3 rounded-lg bg-[var(--color-background)] w-fit text-[var(--color-accent-primary)]">
+                <Cpu className="w-6 h-6" />
               </div>
-            </BentoCard>
-          </Link>
+              <h3 className="text-lg font-bold tracking-tight text-[var(--color-text-primary)] mb-2">AI & Automation</h3>
+              <p className="text-sm text-[var(--color-text-secondary)]">
+                Custom AI agents and automated workflows to streamline operations.
+              </p>
+            </div>
+          </BentoCard>
 
-          <Link href="/projects/smart-car-safety" className="block h-full">
-            <BentoCard className="h-[300px] group cursor-pointer">
-              <div className="h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <Globe className="w-8 h-8 text-violet-500" />
-                    <span className="text-xs font-mono text-neutral-500 border border-white/10 px-2 py-1 rounded">IOT + SYSTEMS</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-violet-400 transition-colors">Smart Car Safety</h3>
-                  <p className="text-sm text-neutral-400">
-                    RTSA Prototype for public transport with accident detection and speed tracking.
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 text-xs font-mono text-neutral-500">
-                  <span className="w-2 h-2 rounded-full bg-yellow-500" />
-                  PROTOTYPE
-                </div>
+          <BentoCard className="p-6">
+            <div className="h-full flex flex-col">
+              <div className="mb-4 p-3 rounded-lg bg-[var(--color-background)] w-fit text-[var(--color-accent-secondary)]">
+                <Globe className="w-6 h-6" />
               </div>
-            </BentoCard>
-          </Link>
+              <h3 className="text-lg font-bold tracking-tight text-[var(--color-text-primary)] mb-2">Web Development</h3>
+              <p className="text-sm text-[var(--color-text-secondary)]">
+                High-performance websites and web apps built with modern tech.
+              </p>
+            </div>
+          </BentoCard>
+
+          <BentoCard className="p-6">
+            <div className="h-full flex flex-col">
+              <div className="mb-4 p-3 rounded-lg bg-[var(--color-background)] w-fit text-[var(--color-text-primary)]">
+                <Database className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold tracking-tight text-[var(--color-text-primary)] mb-2">Backend Systems</h3>
+              <p className="text-sm text-[var(--color-text-secondary)]">
+                Scalable APIs and database architectures for data-heavy apps.
+              </p>
+            </div>
+          </BentoCard>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Footer Status */}
-      <footer className="border-t border-white/5 py-8 mt-12">
-        <div className="max-w-5xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-neutral-600">
-          <div className="flex items-center gap-4">
-            <span>SYSTEM: ONLINE</span>
-            <span>LATENCY: 24ms</span>
-            <span>LOC: ZAMBIA</span>
-          </div>
-          <div>
-            © {new Date().getFullYear()} JOSEPH NGANDU. ALL RIGHTS RESERVED.
+      {/* Footer */}
+      <footer className="px-4 md:px-8 py-8 max-w-5xl mx-auto w-full border-t border-[var(--color-border)] mt-12">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-[var(--color-text-secondary)] font-mono">
+            © {new Date().getFullYear()} Joseph Ngandu. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <a href="https://github.com/joseph0ngandu" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
+              GITHUB
+            </a>
+            <a href="https://linkedin.com/in/josephngandu" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
+              LINKEDIN
+            </a>
           </div>
         </div>
       </footer>
